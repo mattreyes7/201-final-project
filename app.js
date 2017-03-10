@@ -101,7 +101,7 @@
 // Creating a Post-Board Table
 //creating a table header function:
 var nameData;
-var jobNumber;
+var jobNumber = 1;
 function renderHeader(){
 
   var table = document.getElementById('postBoard');
@@ -109,7 +109,7 @@ function renderHeader(){
   table.appendChild(trElement);
 
   nameData = document.createElement('td');
-  nameData.textContent = "#";
+  nameData.textContent = " Job #";
   trElement.appendChild(nameData);
 
 
@@ -128,6 +128,10 @@ function renderHeader(){
   nameData = document.createElement('td');
   nameData.textContent = "Contact";
   trElement.appendChild(nameData);
+
+  var checkbox = document.createElement("INPUT");
+  checkbox.type = "checkbox";
+  trElement.appendChild(checkbox);
 };
 
 renderHeader();
@@ -136,16 +140,34 @@ renderHeader();
 //rendering table rows function:
   this.renderAsRow = function(){
 
-  var trElement = document.createElement('tr');
+  trElement = document.createElement('tr');
   nameData = document.createElement('td');
   nameData.textContent = jobNumber;
+  trElement.appendChild(nameData);
+  table.appendChild(trElement);
 
 
-  var trElement = document.createElement('tr');
+  trElement = document.createElement('tr');
   nameData = document.createElement('td');
   nameData.textContent = this.name;
-  
+  trElement.appendChild(nameData);
+
+  trElement = document.createElement('tr');
+  nameData = document.createElement('td');
+  nameData.textContent = this.location;
+  trElement.appendChild(nameData);
+
+  trElement = document.createElement('tr');
+  nameData = document.createElement('td');
+  nameData.textContent = this.timeFrame;
+  trElement.appendChild(nameData);
+
+  trElement = document.createElement('tr');
+  nameData = document.createElement('td');
+  nameData.textContent = this.Contact;
+  trElement.appendChild(nameData);
 };
+
 // creating a footer function:
 function renderFooter(){
   trElement = document.createElement('tfoot');

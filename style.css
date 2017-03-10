@@ -1,0 +1,21 @@
+/*****************Post-board table styles****************/
+table{
+  border: 1px, solid, black;
+}
+
+thead{
+  width: 15%;
+  border: 1px;
+  font-weight: bold;
+}
+
+td{
+  width:5%;
+  padding: 1%;
+  font-size: 1.5em;
+}
+
+th{
+  padding:2%;
+}
+/*************End of post-board styles****************/

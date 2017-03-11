@@ -1,103 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Creating a Post-Board Table
 //creating a table header function:
 var nameData;
@@ -168,20 +68,34 @@ renderHeader();
   trElement.appendChild(nameData);
 };
 
-// creating a footer function:
-function renderFooter(){
-  trElement = document.createElement('tfoot');
-  nameData = document.createElement('td');
-  nameData.textContent = 'Total';
-  trElement.appendChild(nameData);
-  standsTable.appendChild(trElement);
-  var totalByHour;
-  for (i = 0; i<8; i++){
-    nameData = document.createElement('td');
-    nameData.textContent = columnsTotal[i];
-    console.log(nameData.textContent);
-    totalByHour +=columnsTotal[i];
-    trElement.appendChild(nameData);
-    standsTable.appendChild(trElement);
-  }
-};
+var clientArray = [];
+
+function Client(name, contact, descript, loc){
+  this.name = name;
+  this.email = email;
+  this.descript = descript;
+  this.loc = loc;
+  clientArray.push(this);
+}
+
+// function handleForm(e){
+//   e.preventDefault();
+//   console.log(e);
+//
+//   var name = e.target.name.value;
+//   var email = e.target.email.value;
+//   var descript = e.target.descript.value;
+//   var loc = e.target.loc.value;
+//
+//   console.log(name, loc);
+//
+//   var newClient = new Client(name, email, descript, loc);
+//
+//   e.target.name.value = null;
+//   e.target.email.value = null;
+//   e.target.descript.value = null;
+//   e.target.loc.value = null;
+//}
+
+form.addEventListener('submit', renderAsRow);
+

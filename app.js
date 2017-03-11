@@ -61,35 +61,40 @@ renderHeader();
   nameData = document.createElement('td');
   nameData.textContent = jobNumber;
   trElement.appendChild(nameData);
-  table.appendChild(trElement);
+
   jobNumber++;
 
-  trElement = document.createElement('tr');
+
   nameData = document.createElement('td');
   nameData.textContent = Client.name;
   trElement.appendChild(nameData);
 
-  trElement = document.createElement('tr');
+
   nameData = document.createElement('td');
-  nameData.textContent = Client.location;
+  nameData.textContent = Client.email;
   trElement.appendChild(nameData);
 
-  trElement = document.createElement('tr');
+
   nameData = document.createElement('td');
-  nameData.textContent = Client.timeFrame;
+  nameData.textContent = Client.descript;
   trElement.appendChild(nameData);
 
-  trElement = document.createElement('tr');
+
   nameData = document.createElement('td');
-  nameData.textContent = Client.Contact;
+  nameData.textContent = Client.loc;
   trElement.appendChild(nameData);
+
+  nameData = document.createElement('td');
+  nameData.textContent = Client.time;
+  trElement.appendChild(nameData);
+
+  table.appendChild(trElement);
 };
 
 
   function handleForm(event){
   event.preventDefault();
   console.log('handle form');
-
   var name = event.target.name.value;
   var email = event.target.email.value;
   var descript = event.target.descript.value;
@@ -107,5 +112,5 @@ renderHeader();
   // event.target.time.value = null;
 }
 
-var form  = document.getElementById('submit');
+var form  = document.getElementById('addForm');
 form.addEventListener('submit', handleForm);

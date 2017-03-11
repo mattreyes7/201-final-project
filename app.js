@@ -62,7 +62,7 @@ renderHeader();
   nameData.textContent = jobNumber;
   trElement.appendChild(nameData);
   table.appendChild(trElement);
-
+  jobNumber++;
 
   trElement = document.createElement('tr');
   nameData = document.createElement('td');
@@ -86,24 +86,25 @@ renderHeader();
 };
 
 
-  function handleForm(e){
-  e.preventDefault();
+  function handleForm(event){
+  event.preventDefault();
   console.log('handle form');
 
-  var name = e.target.name.value;
-  var email = e.target.email.value;
-  var descript = e.target.descript.value;
-  var loc = e.target.loc.value;
-  var time = e.target.time.value;
+  var name = event.target.name.value;
+  var email = event.target.email.value;
+  var descript = event.target.descript.value;
+  var loc = event.target.loc.value;
+  var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
   clientArray.push(newClient);
-  console.log(clientArray);
+  console.log(newClient);
+  // debugger;
   renderAsRow(newClient);
-  e.target.name.value = null;
-  e.target.email.value = null;
-  e.target.descript.value = null;
-  e.target.loc.value = null;
-  e.target.time.value = null;
+  // event.target.name.value = null;
+  // event.target.email.value = null;
+  // event.target.descript.value = null;
+  // event.target.loc.value = null;
+  // event.target.time.value = null;
 }
 
 var form  = document.getElementById('submit');

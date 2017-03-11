@@ -107,6 +107,7 @@ renderHeader();
   var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
   clientArray.push(newClient);
+  
   console.log(newClient);
   // debugger;
   renderAsRow(newClient);

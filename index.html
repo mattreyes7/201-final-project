@@ -7,13 +7,46 @@
 </head>
 <body>
   <header>
-    <section class="logo-info">
-      <img class= "logo" src="assets/bus-mall-logo.png" alt="Bus Mall logo">
-      <h2 class ="sub-title">Some random text</h2>
-    </section>
-  </header>
+      <div class="logo-info">
+        <h1 class ="sub-title">Outsource Me</h1>
+      </div>
+      <div class="social-media">
+        <img src="assets/fb-icon.png">
+        <img src="assets/insta-icon.png">
+        <img src="assets/twit-icon.png">
+      </div>
+    </header>
+  <main>
   <div class="seeker-box">
-    <p>Find A Job</p>
+    <a href="postboard.html">Find A Job</a>
   </div>
+  <div class="poster-box">
+    <section class="new-form">
+      <form id="add-form" action="postboard.html" method="get">
+        <fieldset>
+          <legend>New Job</legend>
+          <div>
+            <label for="form">Name:</label>
+            <input id="form" type="text" name="form" placeholder="Name">
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input id="email" type="text" name="email" placeholder="Email">
+          </div>
+          <div>
+            <label for="descript">Job Description:</label>
+            <input id="descript" type="text" name="descript" placeholder="Job Description">
+          </div>
+          <div>
+            <label for="loc">Job Location:</label>
+            <input id="loc" type="text" name="loc" placeholder="Job Locatione">
+          </div>
+          <button id="submit" type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+  </div>
+</main>
+<script src="app.js"></script>
 </body>
 </html>

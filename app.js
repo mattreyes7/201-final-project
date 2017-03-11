@@ -10,27 +10,6 @@ function Client(name, email, descript, loc, time){
   clientArray.push(this);
 }
 
-
-function handleForm(e){
-  e.preventDefault();
-  console.log(e);
-
-  var name = e.target.name.value;
-  var email = e.target.email.value;
-  var descript = e.target.descript.value;
-  var loc = e.target.loc.value;
-
-  console.log(name, loc);
-
-  var newClient = new Client(name, email, descript, loc);
-
-  e.target.name.value = null;
-  e.target.email.value = null;
-  e.target.descript.value = null;
-  e.target.loc.value = null;
-}
-
-
 // Creating a Post-Board Table
 //creating a table header function:
 var nameData;
@@ -107,8 +86,6 @@ renderHeader();
 };
 
 
-form.addEventListener('submit', handleForm);
-
 function handleForm(e){
   e.preventDefault();
   console.log(e);
@@ -117,16 +94,18 @@ function handleForm(e){
   var email = e.target.email.value;
   var descript = e.target.descript.value;
   var loc = e.target.loc.value;
-
+  var time = e.target.time.value;
   console.log(name, loc);
 
-  var newClient = new Client(name, email, descript, loc);
-  renderAsRow();
+  var newClient = new Client(name, email, descript, loc, time);
+
   e.target.name.value = null;
   e.target.email.value = null;
   e.target.descript.value = null;
   e.target.loc.value = null;
+  e.target.time.value = null;
 }
 
-var form  = document.getElementById('addForm');
-form.addEventListener('submit', handleForm);
+var form  = document.getElementById('submit');
+form.addEventListener('click', handleForm);
+console.log (form);

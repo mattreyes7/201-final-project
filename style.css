@@ -1,6 +1,7 @@
 /*****************Post-board table styles****************/
 table{
   border: solid 2px blue;
+  margin-left: 15%;
 }
 
 thead{
@@ -9,10 +10,12 @@ thead{
 }
 
 thead td{
-    
-}
-td{
+    width: 15%;
 
+}
+
+td{
+  background-color: lightgrey;
   font-size: 1.2em;
 }
 

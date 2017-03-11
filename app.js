@@ -7,7 +7,7 @@ function Client(name, email, descript, loc, time){
   this.descript = descript;
   this.loc = loc;
   this.time = time;
-  clientArray.push(this);
+
 }
 
 // Creating a Post-Board Table
@@ -55,7 +55,7 @@ renderHeader();
 
 
 //rendering table rows function:
-  renderAsRow = function(){
+  renderAsRow = function(Client){
 
   trElement = document.createElement('tr');
   nameData = document.createElement('td');
@@ -81,24 +81,24 @@ renderHeader();
 
   trElement = document.createElement('tr');
   nameData = document.createElement('td');
-  nameData.textContent = this.Contact;
+  nameData.textContent = Client.Contact;
   trElement.appendChild(nameData);
 };
 
 
-function handleForm(e){
+  function handleForm(e){
   e.preventDefault();
-  console.log(e);
+  console.log('handle form');
 
   var name = e.target.name.value;
   var email = e.target.email.value;
   var descript = e.target.descript.value;
   var loc = e.target.loc.value;
   var time = e.target.time.value;
-  console.log(name, loc);
-
   var newClient = new Client(name, email, descript, loc, time);
-
+  clientArray.push(newClient);
+  console.log(clientArray);
+  renderAsRow(newClient);
   e.target.name.value = null;
   e.target.email.value = null;
   e.target.descript.value = null;
@@ -107,5 +107,4 @@ function handleForm(e){
 }
 
 var form  = document.getElementById('submit');
-form.addEventListener('click', handleForm);
-console.log (form);
+form.addEventListener('submit', handleForm);

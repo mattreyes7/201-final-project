@@ -1,0 +1,43 @@
+body {
+  background-image: url(http://imperiousent.com/wp-content/uploads/2016/12/people-helping-people.png);
+  color: white;
+}
+
+.bio1 {
+  display: inline;
+}
+
+.bio2 {
+display: inline;
+
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+nav li {
+  display: inline;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: grey;
+    color: white;
+    padding: 1.5rem;
+    opacity: .9;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+img {
+  height: 300px;
+  width: 400px;
+}
+
+.pic1{
+  margin-left: 875px;
+}

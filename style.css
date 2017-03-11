@@ -1,4 +1,55 @@
 
+body {
+  background-color: beige;
+}
+
+.bio1 {
+  display: inline;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+nav li {
+  display: inline;
+  border: solid black 3px;
+  padding: .5em;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: grey;
+    color: black;
+    padding: 1.5rem;
+    opacity: .9;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.wrapper2 {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 100%;
+}
+
+.name2 {
+  display: block;
+}
+
+img {
+  height: 300px;
+  width: 400px;
+}
+
+.footer, h1 {
+  text-align: center;
+}
+
+
 
 
 
@@ -41,3 +92,4 @@ td{
 
 
 /*************End of post-board styles****************/
+

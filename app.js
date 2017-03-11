@@ -45,10 +45,10 @@ function renderHeader(){
   nameData.textContent = "Time Frame";
   trElement.appendChild(nameData);
 
+  nameData = document.createElement('td');
+  nameData.textContent = "Accept job";
+  trElement.appendChild(nameData);
 
-  var checkbox = document.createElement("INPUT");
-  checkbox.type = "checkbox";
-  trElement.appendChild(checkbox);
 };
 
 renderHeader();
@@ -58,6 +58,7 @@ renderHeader();
   renderAsRow = function(Client){
 
   trElement = document.createElement('tr');
+
   nameData = document.createElement('td');
   nameData.textContent = jobNumber;
   trElement.appendChild(nameData);
@@ -87,6 +88,10 @@ renderHeader();
   nameData = document.createElement('td');
   nameData.textContent = Client.time;
   trElement.appendChild(nameData);
+
+  var checkbox = document.createElement("INPUT");
+  checkbox.type = "checkbox";
+  trElement.appendChild(checkbox);
 
   table.appendChild(trElement);
 };

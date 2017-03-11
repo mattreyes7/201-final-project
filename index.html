@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class = "navigation">
+    <ul>
+      <li> <a href = "index.html">Home</a></li>
+      <li> <a href = "aboutus.html">About Us</a></li>
+    </ul>
+  </nav>
   <header>
       <div class="logo-info">
         <h1 class ="sub-title">Outsource Me</h1>
@@ -15,6 +21,12 @@
         <img src="assets/insta-icon.png">
         <img src="assets/twit-icon.png">
       </div>
+      <div>
+        <label for="form">Login:</label>
+        <input id="email" type="text" name="email" placeholder="Email or Username">
+        <input id="email" type="password" name="email" placeholder="Password">
+        <button id="submit" type="submit">Submit</button>
+      </div> 
     </header>
   <main>
   <div class="seeker-box">
@@ -22,6 +34,7 @@
   </div>
   <div class="poster-box">
     <section class="new-form">
+
       <form id="add-form" action="postboard.html" method="get">
         <fieldset>
           <legend>New Job</legend>
@@ -39,11 +52,12 @@
           </div>
           <div>
             <label for="loc">Job Location:</label>
-            <input id="loc" type="text" name="loc" placeholder="Job Locatione">
+            <input id="loc" type="text" name="loc" placeholder="Job Location">
           </div>
           <button id="submit" type="submit">Submit</button>
         </fieldset>
       </form>
+
     </section>
   </div>
 </main>

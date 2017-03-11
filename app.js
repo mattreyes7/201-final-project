@@ -94,6 +94,11 @@ renderHeader();
   trElement.appendChild(checkbox);
 
   table.appendChild(trElement);
+
+  var lfckv = document.getElementById("lifecheck").checked
+    function exefunction(){
+      alert(lfckv);
+    }
 };
 
 
@@ -107,7 +112,7 @@ renderHeader();
   var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
   clientArray.push(newClient);
-  
+
   console.log(newClient);
   // debugger;
   renderAsRow(newClient);

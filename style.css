@@ -77,14 +77,16 @@ table{
 
 thead{
   font-weight: bold;
-  background-color: grey;
 }
 
 thead td{
     width: 15%;
-
+    background-color: grey;
 }
 
+tr {
+    background-color: lightgrey;
+}
 td{
   background-color: lightgrey;
   font-size: 1.2em;
@@ -92,4 +94,3 @@ td{
 
 
 /*************End of post-board styles****************/
-

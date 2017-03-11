@@ -1,6 +1,5 @@
 body {
-  background-image: url(http://imperiousent.com/wp-content/uploads/2016/12/people-helping-people.png);
-  color: white;
+  background-color: beige;
 }
 
 .bio1 {
@@ -18,13 +17,15 @@ nav {
 
 nav li {
   display: inline;
+  border: solid black 3px;
+  padding: .5em;
 }
 
 .container {
     max-width: 80rem;
     margin: 0 auto;
     background-color: grey;
-    color: white;
+    color: black;
     padding: 1.5rem;
     opacity: .9;
 }
@@ -40,4 +41,8 @@ img {
 
 .pic1{
   margin-left: 875px;
+}
+
+.footer {
+  text-align: center;
 }

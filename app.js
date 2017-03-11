@@ -107,14 +107,14 @@ renderHeader();
   var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
   clientArray.push(newClient);
-  console.log(newClient);
-  // debugger;
+  //console.log(newClient);
+
   renderAsRow(newClient);
-  // event.target.name.value = null;
-  // event.target.email.value = null;
-  // event.target.descript.value = null;
-  // event.target.loc.value = null;
-  // event.target.time.value = null;
+  event.target.name.value = null;
+  event.target.email.value = null;
+  event.target.descript.value = null;
+  event.target.loc.value = null;
+  event.target.time.value = null;
 }
 
 var form  = document.getElementById('addForm');

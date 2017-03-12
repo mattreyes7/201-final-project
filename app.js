@@ -110,11 +110,11 @@ renderHeader();
   console.log(newClient);
 
   renderAsRow(newClient);
-  event.target.name.value = null;
-  event.target.email.value = null;
-  event.target.descript.value = null;
-  event.target.loc.value = null;
-  event.target.time.value = null;
+  // event.target.name.value = null;
+  // event.target.email.value = null;
+  // event.target.descript.value = null;
+  // event.target.loc.value = null;
+  // event.target.time.value = null;
 }
 
 var form  = document.getElementById('addForm');

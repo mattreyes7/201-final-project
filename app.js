@@ -94,7 +94,11 @@ renderHeader();
   trElement.appendChild(checkbox);
 
   table.appendChild(trElement);
-};
+  checkbox.addEventListener("click", function() {
+     alert('Good Luck!!');
+   })
+ };
+
 
 
   function handleForm(event){

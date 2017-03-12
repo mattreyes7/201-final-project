@@ -89,17 +89,23 @@ renderHeader();
   nameData.textContent = Client.time;
   trElement.appendChild(nameData);
 
-  var checkbox = document.createElement("INPUT");
+  checkbox = document.createElement("INPUT");
   checkbox.type = "checkbox";
   trElement.appendChild(checkbox);
 
+
+
   table.appendChild(trElement);
+
+  checkbox.addEventListener("click", alert('yes'))
+
+
 };
 
 
   function handleForm(event){
   event.preventDefault();
-  console.log('handle form');
+
   var name = event.target.name.value;
   var email = event.target.email.value;
   var descript = event.target.descript.value;
@@ -107,7 +113,7 @@ renderHeader();
   var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
   clientArray.push(newClient);
-  console.log(newClient);
+
   // debugger;
   renderAsRow(newClient);
   // event.target.name.value = null;

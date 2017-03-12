@@ -73,14 +73,28 @@ table{
 
 thead{
   font-weight: bold;
-  background-color: grey;
 }
 
 thead td{
     width: 15%;
-
+    background-color: grey;
 }
 
+
+tr {
+    background-color: lightgrey;
+}
+
+td {
+  background-color: lightgrey;
+  font-size: 1.2em;
+}
+
+<<<<<<< HEAD
 tr {
   background-color: grey;
 }
+=======
+
+/*************End of post-board styles****************/
+>>>>>>> 1105a565ff0c3a21cdb3a139cc7ccb63ac83ce85

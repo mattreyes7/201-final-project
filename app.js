@@ -23,15 +23,11 @@ function userLs(event){
   event.preventDefault();
   var userName = document.getElementById('userName').value;
   var password = document.getElementById('password').value;
-
-  // var userName = event.target.userName.value;
-  // var password = event.target.password.value;
-//   users.push([loginSubmit,loginPass]);
-  // localStorage.setItem('userName', JSON.stringify(userName));
-  localStorage.userName = JSON.stringify(userName)
-  localStorage.userName = JSON.stringify(password)
-
-  // localStorage.setItem('password', JSON.stringify(password));
+  // localStorage.userName = JSON.stringify(userName);
+  // localStorage.password = JSON.stringify(password);
+  users.push([userName, password]);
+  var lsUsers = JSON.stringify(users);
+  localStorage.setItem('lsUsers', lsUsers);
   // localStorage.getItem('userName', JSON.parse(userName));
   // localStorage.getItem('password', JSON.parse(password));
 }

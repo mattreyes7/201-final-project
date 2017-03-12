@@ -1,74 +1,70 @@
-
-body {
-  background-color: beige;
-}
-
-.bio1 {
-  display: inline;
-}
-
-nav {
-  margin-bottom: 50px;
-}
-
-nav li {
-  display: inline;
-  border: solid black 3px;
-  padding: .5em;
-}
-
-.container {
-    max-width: 80rem;
-    margin: 0 auto;
-    background-color: grey;
-    color: black;
-    padding: 1.5rem;
-    opacity: .9;
-}
-
-.wrapper {
-  min-height: 100%;
-}
-
-.wrapper2 {
-  display: flex;
-  justify-content: flex-end;
-  min-height: 100%;
-}
-
-.name2 {
-  display: block;
-}
-
-img {
-  height: 300px;
-  width: 400px;
-}
-
-.footer, h1 {
+.nav {
   text-align: center;
 }
-
-
-
-
-
-
-
-
-/***************Styling nav bar***************/
-.navigation{
-  background-color: lightblue;
-  width: 100%;
-  height: 4em;
+.bio-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:
 }
-.navigation ul li {
-  display:inline;
-  list-style: none;
+
+
+ .person1 {
+    width: 300px;
+    height: 500px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right: 2px;
+    margin-left: 2px;
+
 }
-.navigation ul li a{
-  margin: 3em;
+
+ .person2 {
+   width: 300px;
+   height: 500px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
 }
+
+ .person3 {
+   width: 300px;
+   height: 500px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
+}
+
+ .person4 {
+   width: 300px;
+   height: 500px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
+}
+
+.person1-pic, .person2-pic, .person3-pic, .person4-pic {
+  width: 300px;
+  height: 250px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+ .about-us-footer{
+  width: 300px;
+  height: 500px;
+  flex-wrap: wrap;
+  text-align: center;
+
+}
+
 /*****************Post-board table styles****************/
 table{
   border: solid 2px blue;
@@ -77,19 +73,22 @@ table{
 
 thead{
   font-weight: bold;
-  background-color: grey;
 }
 
 thead td{
     width: 15%;
-
+    background-color: grey;
 }
 
-td{
+
+tr {
+    background-color: lightgrey;
+}
+
+td {
   background-color: lightgrey;
   font-size: 1.2em;
 }
 
 
 /*************End of post-board styles****************/
-

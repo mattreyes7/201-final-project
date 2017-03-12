@@ -14,6 +14,30 @@ function Client(name, email, descript, loc, time){
 //creating a table header function:
 var nameData;
 var jobNumber = 1;
+var users = [];
+
+// storing log in info
+
+document.getElementById('loginSubmit').addEventListener('click', userLs);
+function userLs(event){
+  event.preventDefault();
+  var userName = document.getElementById('userName').value;
+  var password = document.getElementById('password').value;
+
+  // var userName = event.target.userName.value;
+  // var password = event.target.password.value;
+//   users.push([loginSubmit,loginPass]);
+  // localStorage.setItem('userName', JSON.stringify(userName));
+  localStorage.userName = JSON.stringify(userName)
+  localStorage.userName = JSON.stringify(password)
+
+  // localStorage.setItem('password', JSON.stringify(password));
+  // localStorage.getItem('userName', JSON.parse(userName));
+  // localStorage.getItem('password', JSON.parse(password));
+}
+// var login = document.getElementById('userName');
+// var pass = document.getElementById('password');
+
 function renderHeader(){
 
   var table = document.getElementById('postBoard');

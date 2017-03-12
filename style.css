@@ -15,13 +15,19 @@
     height: 500px;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-right: 2px;
+    margin-left: 2px;
+
 }
-}
+
  .person2 {
    width: 300px;
    height: 500px;
    justify-content: flex-start;
    flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
 }
 
  .person3 {
@@ -29,6 +35,9 @@
    height: 500px;
    justify-content: flex-start;
    flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
 }
 
  .person4 {
@@ -36,6 +45,9 @@
    height: 500px;
    justify-content: flex-start;
    flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
 }
 
 .person1-pic, .person2-pic, .person3-pic, .person4-pic {

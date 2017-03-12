@@ -97,9 +97,9 @@ renderHeader();
 
   table.appendChild(trElement);
 
-  checkbox.addEventListener("click", alert('yes'))
-
-
+  checkbox.addEventListener("click", function() {
+    alert('Good Luck!!');
+  })
 };
 
 

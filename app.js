@@ -14,6 +14,30 @@ function Client(name, email, descript, loc, time){
 //creating a table header function:
 var nameData;
 var jobNumber = 1;
+var users = [];
+
+// storing log in info
+
+document.getElementById('loginSubmit').addEventListener('click', userLs);
+function userLs(event){
+  event.preventDefault();
+  var userName = document.getElementById('userName').value;
+  var password = document.getElementById('password').value;
+
+  // var userName = event.target.userName.value;
+  // var password = event.target.password.value;
+//   users.push([loginSubmit,loginPass]);
+  // localStorage.setItem('userName', JSON.stringify(userName));
+  localStorage.userName = JSON.stringify(userName)
+  localStorage.userName = JSON.stringify(password)
+
+  // localStorage.setItem('password', JSON.stringify(password));
+  // localStorage.getItem('userName', JSON.parse(userName));
+  // localStorage.getItem('password', JSON.parse(password));
+}
+// var login = document.getElementById('userName');
+// var pass = document.getElementById('password');
+
 function renderHeader(){
 
   var table = document.getElementById('postBoard');
@@ -94,7 +118,11 @@ renderHeader();
   trElement.appendChild(checkbox);
 
   table.appendChild(trElement);
-};
+  checkbox.addEventListener("click", function() {
+     alert('Good Luck!!');
+   })
+ };
+
 
 
   function handleForm(event){
@@ -107,14 +135,13 @@ renderHeader();
   var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
   clientArray.push(newClient);
-  console.log(newClient);
 
   renderAsRow(newClient);
-  // event.target.name.value = null;
-  // event.target.email.value = null;
-  // event.target.descript.value = null;
-  // event.target.loc.value = null;
-  // event.target.time.value = null;
+  event.target.name.value = null;
+  event.target.email.value = null;
+  event.target.descript.value = null;
+  event.target.loc.value = null;
+  event.target.time.value = null;
 }
 
 var form  = document.getElementById('addForm');

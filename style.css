@@ -80,3 +80,7 @@ thead td{
     width: 15%;
 
 }
+
+tr {
+  background-color: grey;
+}

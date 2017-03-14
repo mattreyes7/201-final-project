@@ -1,0 +1,98 @@
+.nav {
+  text-align: center;
+}
+.bio-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:
+}
+
+
+ .person1 {
+    width: 300px;
+    height: 500px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right: 2px;
+    margin-left: 2px;
+
+}
+
+ .person2 {
+   width: 300px;
+   height: 500px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
+}
+
+ .person3 {
+   width: 300px;
+   height: 500px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
+}
+
+ .person4 {
+   width: 300px;
+   height: 500px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin-right: 2px;
+   margin-left: 2px;
+
+}
+
+.person1-pic, .person2-pic, .person3-pic, .person4-pic {
+  width: 300px;
+  height: 250px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+ .about-us-footer{
+  width: 300px;
+  height: 500px;
+  flex-wrap: wrap;
+  text-align: center;
+
+}
+
+/*****************Post-board table styles****************/
+table{
+  border: solid 2px blue;
+  margin-left: 15%;
+}
+
+thead{
+  font-weight: bold;
+}
+
+thead td{
+    width: 15%;
+    background-color: grey;
+}
+
+
+tr {
+    background-color: lightgrey;
+}
+
+td {
+  background-color: lightgrey;
+  font-size: 1.2em;
+}
+
+tr {
+  background-color: grey;
+}
+=======
+
+/*************End of post-board styles****************/

@@ -3,7 +3,9 @@ var nameData;
 var jobNumber = 2;
 var users = [];
 // debugger;
-var newClient = JSON.parse(localStorage.getItem('lsClient'));
+//var newClient = JSON.parse(localStorage.getItem('lsClient'));
+var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
+console.log(clientArray);
 
 function renderHeader(){
 
@@ -42,54 +44,56 @@ function renderHeader(){
 
 };
 
- renderHeader();
+renderHeader();
 
 
 //rendering table rows function:
-  renderAsRow = function(Client){
+renderAsRow = function(client){
+  for (i = 0; i<clientArray.length; i++){
+    // localStorage.getItem('lsClient', JSON.parse(newClient));
+    trElement = document.createElement('tr');
 
-  // localStorage.getItem('lsClient', JSON.parse(newClient));
-  trElement = document.createElement('tr');
+    nameData = document.createElement('td');
+    nameData.textContent = jobNumber;
+    trElement.appendChild(nameData);
 
-  nameData = document.createElement('td');
-  nameData.textContent = jobNumber;
-  trElement.appendChild(nameData);
-
-  jobNumber++;
-
-
-  nameData = document.createElement('td');
-  nameData.textContent = Client.name;
-  trElement.appendChild(nameData);
+    jobNumber++;
 
 
-  nameData = document.createElement('td');
-  nameData.textContent = Client.email;
-  trElement.appendChild(nameData);
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].name;
+    trElement.appendChild(nameData);
 
 
-  nameData = document.createElement('td');
-  nameData.textContent = Client.descript;
-  trElement.appendChild(nameData);
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].email;
+    trElement.appendChild(nameData);
 
 
-  nameData = document.createElement('td');
-  nameData.textContent = Client.loc;
-  trElement.appendChild(nameData);
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].descript;
+    trElement.appendChild(nameData);
 
-  nameData = document.createElement('td');
-  nameData.textContent = Client.time;
-  trElement.appendChild(nameData);
 
-  var checkbox = document.createElement("INPUT");
-  checkbox.type = "checkbox";
-  trElement.appendChild(checkbox);
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].loc;
+    trElement.appendChild(nameData);
 
-  table.appendChild(trElement);
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].time;
+    trElement.appendChild(nameData);
+
+    var checkbox = document.createElement("INPUT");
+    checkbox.type = "checkbox";
+    trElement.appendChild(checkbox);
+
+    table.appendChild(trElement);
+  }
+
   checkbox.addEventListener("click", function() {
-     alert('Good Luck!!');
-   })
- };
+    alert('Good Luck!!');
+  })
+};
 
-  console.log(newClient);
-  renderAsRow(newClient);
+renderAsRow(clientArray);
+console.log(clientArray);

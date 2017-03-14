@@ -93,6 +93,13 @@ td {
 tr {
   background-color: grey;
 }
-=======
+
+.available {
+  color: black;
+}
+
+.unavailable {
+  color: grey;
+}
 
 /*************End of post-board styles****************/

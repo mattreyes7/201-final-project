@@ -7,13 +7,68 @@
 </head>
 <body>
   <header>
-    <section class="logo-info">
-      <img class= "logo" src="assets/bus-mall-logo.png" alt="Bus Mall logo">
-      <h2 class ="sub-title">Some random text</h2>
-    </section>
-  </header>
+      <div class="logo-info">
+        <h1 class ="sub-title">Outsource Me</h1>
+      </div>
+      <div class="social-media">
+        <a href="https://www.facebook.com"><img src="assets/fb-icon.png"></a>
+        <a href="https://www.instagram.com"><img src="assets/insta-icon.png"></a>
+        <a href="https://twitter.com"><img src="assets/twit-icon.png"></a>
+      </div>
+      <div>
+        <label for="form">Login:</label>
+        <input id="email" type="text" name="email" placeholder="Email or Username">
+        <input id="email" type="password" name="email" placeholder="Password">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+
+      <div class = "nav">
+
+          <a href = "index.html">Home</a>
+          <a href = "aboutus.html">About Us</a>
+
+      </div>
+
+    </header>
+  <main>
   <div class="seeker-box">
-    <p>Find A Job</p>
+    <a href="#postBoard">Find A Job</a>
   </div>
+  <div class="poster-box">
+    <section class="new-form">
+
+      <form id="addForm">
+        <fieldset>
+          <legend>New Job</legend>
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Name">
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input id="email" type="text" name="email" placeholder="Email">
+          </div>
+          <div>
+            <label for="descript">Job Description:</label>
+            <input id="descript" type="text" name="descript" placeholder="Job Description">
+          </div>
+          <div>
+            <label for="loc">Job Location:</label>
+            <input id="loc" type="text" name="loc" placeholder="Job Location">
+          </div>
+          <div>
+            <label for="timeFrame">Time frame:</label>
+            <input id="time" type="text" name="time" placeholder="timeFrame">
+          </div>
+          <button id="submit" type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+    <table  id = "postBoard" class = "postBoard"></table>
+
+    </section>
+  </div>
+</main>
+<script src="app.js"></script>
 </body>
 </html>

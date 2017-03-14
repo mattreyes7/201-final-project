@@ -2,10 +2,9 @@ var table = document.getElementById('postBoard');
 var nameData;
 var jobNumber = 2;
 var users = [];
-// debugger;
-//var newClient = JSON.parse(localStorage.getItem('lsClient'));
+
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
-console.log(clientArray);
+//console.log(clientArray);
 
 function renderHeader(){
 
@@ -50,9 +49,8 @@ renderHeader();
 //rendering table rows function:
 renderAsRow = function(client){
   for (i = 0; i<clientArray.length; i++){
-    // localStorage.getItem('lsClient', JSON.parse(newClient));
-    trElement = document.createElement('tr');
 
+    trElement = document.createElement('tr');
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
     trElement.appendChild(nameData);
@@ -88,12 +86,15 @@ renderAsRow = function(client){
     trElement.appendChild(checkbox);
 
     table.appendChild(trElement);
+
+    checkbox.addEventListener('click', function() {
+      if (checkbox.checked === true){
+        trElement.setAttribute('class', 'unavailable');
+      } else {
+        checkbox.checked === trElement.setAttribute('class', 'available');
+      }
+    })
   }
-
-  checkbox.addEventListener("click", function() {
-    alert('Good Luck!!');
-  })
-};
-
+}
 renderAsRow(clientArray);
 console.log(clientArray);

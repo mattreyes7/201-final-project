@@ -11,8 +11,8 @@ function Client(name, email, descript, loc, time){
 }
 
 // storing log in info
-
 document.getElementById('loginSubmit').addEventListener('click', userLs);
+
 function userLs(event){
   event.preventDefault();
   var userName = document.getElementById('userName').value;
@@ -37,13 +37,22 @@ function handleForm(event){
   var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
 
+  //restoring old entries to the aray of clients
+  if (localStorage.length) {
+    var oldClients = JSON.parse(localStorage.getItem('lsClientArray'));
+    clientArray = oldClients;
+     console.log(clientArray);
+  }
+
   clientArray.push(newClient);
 
-  //localStorage.setItem('lsClientArray', clientArray);
-  console.log(newClient);
+  //saving clients to the local storage
+  localStorage.setItem('lsClientArray', JSON.stringify(clientArray));
+  //store one latest client
+  //localStorage.setItem('lsClient', JSON.stringify(newClient));
 
-  localStorage.setItem('lsClient', JSON.stringify(newClient));
 
+  // sending to the postboard page
   location.href='postboard.html'
 
   // event.target.name.value = null;

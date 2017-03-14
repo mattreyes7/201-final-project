@@ -1,3 +1,4 @@
+'use strict'
 var clientArray = [];
 var table = document.getElementById('postBoard');
 function Client(name, email, descript, loc, time){
@@ -55,10 +56,11 @@ renderHeader();
 
 
 //rendering table rows function:
-  renderAsRow = function(Client){
+  function renderAsRow(Client){
 
   var trElement = document.createElement('tr');
-  trElement.setAttribute('class', 'available');
+  // trElement.setAttribute('class', 'available');
+  // trElement.setAttribute('class', 'unavailable');
 
   nameData = document.createElement('td');
   nameData.textContent = jobNumber;
@@ -95,10 +97,14 @@ renderHeader();
   trElement.appendChild(checkbox);
 
   table.appendChild(trElement);
-  checkbox.addEventListener("click", function() {
-     trElement.setAttribute('class', 'unavailable');
-   })
- };
+  checkbox.addEventListener('click', function() {
+    if (checkbox.checked === true){
+      trElement.setAttribute('class', 'unavailable');
+    } else {
+      checkbox.checked === trElement.setAttribute('class', 'available');
+    }
+  });
+}
 
 
 

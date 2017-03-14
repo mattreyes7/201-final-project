@@ -95,11 +95,11 @@ tr {
 }
 
 .available {
-  color: red;
+  color: black;
 }
 
 .unavailable {
-  color: gray;
+  color: grey;
 }
 
 /*************End of post-board styles****************/

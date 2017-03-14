@@ -28,6 +28,7 @@ function userLs(event){
   users.push([userName, password]);
   var lsUsers = JSON.stringify(users);
   localStorage.setItem('lsUsers', lsUsers);
+  document.getElementById('greet').textContent = 'Hello, ' +  userName + '!';
   // localStorage.getItem('userName', JSON.parse(userName));
   // localStorage.getItem('password', JSON.parse(password));
 }

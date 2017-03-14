@@ -1,12 +1,62 @@
+
+/*reminder: use Roboto, Francois One, Lobster*/
+/*green hexid:74C6A3, grey hexid:58585B*/
+
+/*---------style for home page----------------------*/
+.logo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo-image {
+  max-width: 300px;
+  max-height: 150px;
+}
+
+.sub-title {
+  font-weight: lighter;
+  font-stretch: extra-condensed;
+  font-family: Lobster;
+  margin: 0;
+}
+.sub-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #74C6A3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.login {
+  font-family: Lobster;
+}
+
+label {
+  font-family: Francois One;
+}
+
+button {
+  font-family: Francois One;
+}
+/*-------------style for about us page-------------*/
+
+h1 {
+  font-family: Lobster;
+}
+
 .nav {
   text-align: center;
+  font-family: Francois One;
 }
 .bio-container {
+    font-family: Francois One;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:
 }
 
 
@@ -48,6 +98,10 @@
    margin-right: 2px;
    margin-left: 2px;
 
+}
+
+.person1-bio, .person2-bio, .person3-bio, .person4-bio {
+  font-family: Roboto;
 }
 
 .person1-pic, .person2-pic, .person3-pic, .person4-pic {

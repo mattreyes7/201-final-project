@@ -2,26 +2,28 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Outsource Me</title>
+  <title>Favor</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
       <div class="logo-info">
-        <h1 class ="sub-title">Outsource Me</h1>
+        <img class="logo-image" src="assets/favrlogo.png">
+        <h2 class ="sub-title">Lend a Hand</h2>
       </div>
+      <div class="sub-header">
       <div class="social-media">
         <a href="https://www.facebook.com"><img src="assets/fb-icon.png"></a>
         <a href="https://www.instagram.com"><img src="assets/insta-icon.png"></a>
         <a href="https://twitter.com"><img src="assets/twit-icon.png"></a>
       </div>
-      <div>
+      <div class="login">
         <label for="form">Login:</label>
         <input id="email" type="text" name="email" placeholder="Email or Username">
-        <input id="email" type="password" name="email" placeholder="Password">
-        <button id="submit" type="submit">Submit</button>
+        <input id="password" type="password" name="password" placeholder="Password">
+        <button id="submit" class="submit" type="submit">Submit</button>
       </div>
-
+      </div>
       <div class = "nav">
 
           <a href = "index.html">Home</a>
@@ -32,14 +34,17 @@
     </header>
   <main>
   <div class="seeker-box">
-    <a href="#postBoard">Find A Job</a>
+    <img src="assets/dohand.png">
+    <a href="postboard.html"> Do A Favor</a>
   </div>
   <div class="poster-box">
+    <img src="assets/askhand.png">
+    <p>Ask For A Favor</p>
     <section class="new-form">
 
       <form id="addForm">
         <fieldset>
-          <legend>New Job</legend>
+          <legend>New Favor</legend>
           <div>
             <label for="name">Name:</label>
             <input id="name" type="text" name="name" placeholder="Name">
@@ -49,11 +54,11 @@
             <input id="email" type="text" name="email" placeholder="Email">
           </div>
           <div>
-            <label for="descript">Job Description:</label>
+            <label for="descript">Favor Description:</label>
             <input id="descript" type="text" name="descript" placeholder="Job Description">
           </div>
           <div>
-            <label for="loc">Job Location:</label>
+            <label for="loc">Favor Location:</label>
             <input id="loc" type="text" name="loc" placeholder="Job Location">
           </div>
           <div>

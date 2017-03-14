@@ -13,7 +13,7 @@ function Client(name, email, descript, loc, time){
 // Creating a Post-Board Table
 //creating a table header function:
 var nameData;
-var jobNumber = 1;
+var favorNumber = 1;
 function renderHeader(){
 
   var table = document.getElementById('postBoard');
@@ -21,7 +21,7 @@ function renderHeader(){
   table.appendChild(trElement);
 
   nameData = document.createElement('td');
-  nameData.textContent = " Job #";
+  nameData.textContent = " Favor #";
   trElement.appendChild(nameData);
 
 
@@ -60,10 +60,10 @@ renderHeader();
   trElement = document.createElement('tr');
 
   nameData = document.createElement('td');
-  nameData.textContent = jobNumber;
+  nameData.textContent = favorNumber;
   trElement.appendChild(nameData);
 
-  jobNumber++;
+  favorNumber++;
 
 
   nameData = document.createElement('td');

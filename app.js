@@ -57,7 +57,8 @@ renderHeader();
 //rendering table rows function:
   renderAsRow = function(Client){
 
-  trElement = document.createElement('tr');
+  var trElement = document.createElement('tr');
+  trElement.setAttribute('class', 'available');
 
   nameData = document.createElement('td');
   nameData.textContent = jobNumber;
@@ -95,7 +96,7 @@ renderHeader();
 
   table.appendChild(trElement);
   checkbox.addEventListener("click", function() {
-     alert('Good Luck!!');
+     trElement.setAttribute('class', 'unavailable');
    })
  };
 

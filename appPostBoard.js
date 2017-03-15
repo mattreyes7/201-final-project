@@ -88,12 +88,22 @@ renderAsRow = function(client){
     trElement.appendChild(checkbox);
 
     table.appendChild(trElement);
-  }
 
-  checkbox.addEventListener("click", function() {
+
+    checkbox.addEventListener('click', function() {
+    if (checkbox.checked === true){
+      alert('Good Luck!!');
+      trElement.setAttribute('class', 'unavailable');
+    } else {
+      checkbox.checked === trElement.setAttribute('class', 'available');
+    }
     alert('Good Luck!!');
-  })
-};
+  });
+  }
+}
+
+
+
 
 renderAsRow(clientArray);
 console.log(clientArray);

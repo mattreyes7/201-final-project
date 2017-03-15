@@ -80,25 +80,24 @@ renderAsRow = function(client){
     nameData = document.createElement('td');
     nameData.textContent = client[i].time;
     trElement.appendChild(nameData);
-
+    debugger;
     var checkbox = document.createElement("INPUT");
     checkbox.type = "checkbox";
     trElement.appendChild(checkbox);
 
-
-
-    checkbox.addEventListener('click', function() {
-      if (checkbox.checked === true){
-        trElement.setAttribute('class', 'unavailable');
-      } else {
-        checkbox.checked === trElement.setAttribute('class', 'available');
-      }
-    })
     table.appendChild(trElement);
   }
 }
 renderAsRow(clientArray);
-console.log(clientArray);
+//console.log(clientArray);
+
+document.getElementsByTagName('checkbox').addEventListener('click', function() {
+  if (checkbox.checked === true){
+    trElement.setAttribute('class', 'unavailable');
+  } else {
+    checkbox.checked = trElement.setAttribute('class', 'available');
+  }
+})
 document.getElementById('callMap').addEventListener('click', callMap);
 function callMap(){
     location.href='job-location.html';

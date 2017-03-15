@@ -1,5 +1,6 @@
 var clientArray = [];
 var table = document.getElementById('postBoard');
+
 function Client(name, email, descript, loc, time){
 
   this.name = name;

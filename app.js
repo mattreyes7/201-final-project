@@ -1,4 +1,4 @@
-'use strict'
+//'use strict'
 var clientArray = [];
 var users = [];
 // var table = document.getElementById('postBoard');
@@ -37,10 +37,11 @@ function handleForm(event){
   var newClient = new Client(name, email, descript, loc, time);
 
   //restoring old entries to the aray of clients
-  if (localStorage.length) {
+  if (localStorage.lsClientArray) {
     var oldClients = JSON.parse(localStorage.getItem('lsClientArray'));
+    //console.log('oldClients:' +oldClients)
     clientArray = oldClients;
-    console.log(clientArray);
+    //console.log(clientArray);
   }
 
   clientArray.push(newClient);

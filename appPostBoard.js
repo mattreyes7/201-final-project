@@ -85,7 +85,7 @@ renderAsRow = function(client){
     checkbox.type = "checkbox";
     trElement.appendChild(checkbox);
 
-    table.appendChild(trElement);
+
 
     checkbox.addEventListener('click', function() {
       if (checkbox.checked === true){
@@ -94,6 +94,7 @@ renderAsRow = function(client){
         checkbox.checked === trElement.setAttribute('class', 'available');
       }
     })
+    table.appendChild(trElement);
   }
 }
 renderAsRow(clientArray);

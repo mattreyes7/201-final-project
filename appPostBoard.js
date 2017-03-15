@@ -88,21 +88,15 @@ for (i = 0; i<clientArray.length; i++){
     table.appendChild(trElement);
 
 
-};
-
 checkbox.addEventListener('click', function() {
-  if (checkbox.checked === true){
-    console.log(1);
-    trElement.setAttribute('class', 'unavailable');
-  } else {
-    console.log(2);
-    checkbox.checked === trElement.setAttribute('class', 'available');
-  }
-
-});
-
-
-  };
+     if (this.checked){
+       this.parentElement.setAttribute('class', 'unavailable');
+     } else {
+       this.parentElement.setAttribute('class', 'available');
+     }
+   });
+};
+};
 
 
 renderAsRow(clientArray);

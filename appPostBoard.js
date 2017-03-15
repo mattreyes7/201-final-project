@@ -1,15 +1,14 @@
 var table = document.getElementById('postBoard');
+var trElement;
 var nameData;
 var jobNumber = 2;
 var users = [];
-
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
 //console.log(clientArray);
 
 function renderHeader(){
 
-  var table = document.getElementById('postBoard');
-  var trElement = document.createElement('thead');
+  trElement = document.createElement('thead');
   table.appendChild(trElement);
 
   nameData = document.createElement('td');
@@ -45,18 +44,17 @@ function renderHeader(){
 
 renderHeader();
 
-
 //rendering table rows function:
 renderAsRow = function(client){
   for (i = 0; i<clientArray.length; i++){
 
     trElement = document.createElement('tr');
+
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
     trElement.appendChild(nameData);
 
     jobNumber++;
-
 
     nameData = document.createElement('td');
     nameData.textContent = client[i].name;
@@ -80,25 +78,28 @@ renderAsRow = function(client){
     nameData = document.createElement('td');
     nameData.textContent = client[i].time;
     trElement.appendChild(nameData);
-    debugger;
-    var checkbox = document.createElement("INPUT");
+
+    var checkbox = document.createElement('INPUT');
     checkbox.type = "checkbox";
     trElement.appendChild(checkbox);
 
+    checkbox.addEventListener('click', function(){
+      if (this.checked){
+        this.parentElement.setAttribute('class', 'unavailable')
+      } else {
+        this.parentElement.setAttribute('class', 'available')
+      }
+    })
     table.appendChild(trElement);
   }
 }
-renderAsRow(clientArray);
-//console.log(clientArray);
 
-document.getElementsByTagName('checkbox').addEventListener('click', function() {
-  if (checkbox.checked === true){
-    trElement.setAttribute('class', 'unavailable');
-  } else {
-    checkbox.checked = trElement.setAttribute('class', 'available');
-  }
-})
-document.getElementById('callMap').addEventListener('click', callMap);
-function callMap(){
-    location.href='job-location.html';
+renderAsRow(clientArray);
+
+document.getElementById('callMap').addEventListener('click', goToMaps);
+
+function goToMaps(){
+  location.href='job-location.html'
 }
+
+console.log(clientArray);

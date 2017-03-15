@@ -3,8 +3,13 @@ var trElement;
 var nameData;
 var jobNumber = 2;
 var users = [];
+<<<<<<< HEAD
+=======
+// debugger;
+//var newClient = JSON.parse(localStorage.getItem('lsClient'));
+>>>>>>> 617c4400453a6a931b0d50df2510cbc2b7f9a0ee
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
-//console.log(clientArray);
+console.log(clientArray);
 
 function renderHeader(){
 
@@ -47,7 +52,7 @@ renderHeader();
 //rendering table rows function:
 renderAsRow = function(client){
   for (i = 0; i<clientArray.length; i++){
-
+    // localStorage.getItem('lsClient', JSON.parse(newClient));
     trElement = document.createElement('tr');
 
     nameData = document.createElement('td');
@@ -83,6 +88,7 @@ renderAsRow = function(client){
     checkbox.type = "checkbox";
     trElement.appendChild(checkbox);
 
+<<<<<<< HEAD
     checkbox.addEventListener('click', function(){
       if (this.checked){
         this.parentElement.setAttribute('class', 'unavailable')
@@ -93,6 +99,15 @@ renderAsRow = function(client){
     table.appendChild(trElement);
   }
 }
+=======
+    table.appendChild(trElement);
+  }
+
+  checkbox.addEventListener("click", function() {
+    alert('Good Luck!!');
+  })
+};
+>>>>>>> 617c4400453a6a931b0d50df2510cbc2b7f9a0ee
 
 renderAsRow(clientArray);
 

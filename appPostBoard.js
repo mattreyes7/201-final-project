@@ -51,12 +51,12 @@ renderAsRow = function(client){
   for (i = 0; i<clientArray.length; i++){
 
     trElement = document.createElement('tr');
+
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
     trElement.appendChild(nameData);
 
     jobNumber++;
-
 
     nameData = document.createElement('td');
     nameData.textContent = client[i].name;
@@ -81,21 +81,36 @@ renderAsRow = function(client){
     nameData.textContent = client[i].time;
     trElement.appendChild(nameData);
 
-    var checkbox = document.createElement("INPUT");
+    var checkbox = document.createElement('INPUT');
     checkbox.type = "checkbox";
     trElement.appendChild(checkbox);
 
-
-
     checkbox.addEventListener('click', function() {
-      if (checkbox.checked === true){
+      if (checkbox.checked){
         trElement.setAttribute('class', 'unavailable');
       } else {
-        checkbox.checked === trElement.setAttribute('class', 'available');
+        trElement.setAttribute('class', 'available');
       }
     })
+
     table.appendChild(trElement);
+
   }
 }
 renderAsRow(clientArray);
+
+document.getElementById('goMaps').addEventListener('click', goToMaps);
+
+function goToMaps(){
+  location.href='job-location.html'
+}
+
+
+// document.getElementsByTagName('INPUT').addEventListener('click', function() {
+//   if (checkbox.checked){
+//     trElement.setAttribute('class', 'unavailable');
+//   } else {
+//     trElement.setAttribute('class', 'available');
+//   }
+// })
 console.log(clientArray);

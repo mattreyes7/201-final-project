@@ -2,10 +2,9 @@ var table = document.getElementById('postBoard');
 var nameData;
 var jobNumber = 2;
 var users = [];
-// debugger;
-//var newClient = JSON.parse(localStorage.getItem('lsClient'));
+
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
-console.log(clientArray);
+//console.log(clientArray);
 
 function renderHeader(){
 
@@ -49,10 +48,10 @@ renderHeader();
 
 //rendering table rows function:
 renderAsRow = function(client){
-  for (i = 0; i<clientArray.length; i++){
-    // localStorage.getItem('lsClient', JSON.parse(newClient));
-    trElement = document.createElement('tr');
+for (i = 0; i<clientArray.length; i++){
 
+    trElement = document.createElement('tr');
+    trElement.setAttribute('class', 'available');
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
     trElement.appendChild(nameData);
@@ -86,23 +85,24 @@ renderAsRow = function(client){
     var checkbox = document.createElement("INPUT");
     checkbox.type = "checkbox";
     trElement.appendChild(checkbox);
-
     table.appendChild(trElement);
 
 
-    checkbox.addEventListener('click', function() {
-    if (checkbox.checked === true){
-      alert('Good Luck!!');
-      trElement.setAttribute('class', 'unavailable');
-    } else {
-      checkbox.checked === trElement.setAttribute('class', 'available');
-    }
-    alert('Good Luck!!');
-  });
+};
+
+checkbox.addEventListener('click', function() {
+  if (checkbox.checked === true){
+    console.log(1);
+    trElement.setAttribute('class', 'unavailable');
+  } else {
+    console.log(2);
+    checkbox.checked === trElement.setAttribute('class', 'available');
   }
-}
+
+});
 
 
+  };
 
 
 renderAsRow(clientArray);

@@ -99,3 +99,7 @@ renderAsRow = function(client){
 }
 renderAsRow(clientArray);
 console.log(clientArray);
+document.getElementById('callMap').addEventListener('click', callMap);
+function callMap(){
+    location.href='job-location.html';
+}

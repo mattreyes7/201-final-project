@@ -1,4 +1,4 @@
-//'use strict'
+'use strict'
 var clientArray = [];
 var users = [];
 // var table = document.getElementById('postBoard');

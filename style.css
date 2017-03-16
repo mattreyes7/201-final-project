@@ -224,12 +224,15 @@ tr {
 }
 
 .available {
+
   color: black;
 }
 
 .unavailable {
   color: grey;
 }
+
+
 
 
 /*************End of post-board styles****************/

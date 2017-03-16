@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Outsource Me</title>
+  <title>Favor</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <header>
@@ -25,25 +26,47 @@
         <button id="loginSubmit" type="click">Submit</button>
       </div>
 
-      <div class = "nav">
+    <h2 class ="sub-title">Lend a Hand</h2>
+  </div>
 
-          <a href = "index.html">Home</a>
-          <a href = "aboutus.html">About Us</a>
-
-      </div>
-
-    </header>
-  <main>
-  <div class="seeker-box">
+  <div class="sub-header">
+    <div class="social-media">
+      <a href="https://www.facebook.com"><img src="assets/fb-icon.png"></a>
+      <a href="https://www.instagram.com"><img src="assets/insta-icon.png"></a>
+      <a href="https://twitter.com"><img src="assets/twit-icon.png"></a>
+    </div>
+    <div class="login">
+      <label for="form">Login:</label>
+      <input id="email" type="text" name="email" placeholder="Email or Username">
+      <input id="password" type="password" name="password" placeholder="Password">
+      <button id="submit" class="submit" type="submit">Submit</button>
+    </div>
     <p id = "greet">Hello, guest!</p>
+  </div>
+  <div class = "nav">
+
+    <a href = "index.html">Home</a>
+    <a href = "aboutus.html">About Us</a>
+
+  </div>
+
+</header>
+<main>
+  <div class="seeker-box">
+
+    <a href="postboard.html"><img class="do-hand" src="assets/dohand.png"></a>
+    <div class="text-link"><a href="postboard.html">Do A Favor</a></div>
+
     <a href="postboard.html">Find A Job</a>
+
   </div>
   <div class="poster-box">
+    <img class="ask-hand" src="assets/askhand.png">
     <section class="new-form">
 
       <form id="addForm">
         <fieldset>
-          <legend>New Job</legend>
+          <legend>Ask For A Favor</legend>
           <div>
             <label for="name">Name:</label>
             <input id="name" type="text" name="name" placeholder="Name">
@@ -53,11 +76,11 @@
             <input id="email" type="text" name="email" placeholder="Email">
           </div>
           <div>
-            <label for="descript">Job Description:</label>
+            <label for="descript">Favor Description:</label>
             <input id="descript" type="text" name="descript" placeholder="Job Description">
           </div>
           <div>
-            <label for="loc">Job Location:</label>
+            <label for="loc">Favor Location:</label>
             <input id="loc" type="text" name="loc" placeholder="Job Location">
           </div>
           <div>
@@ -67,10 +90,9 @@
           <button id="submit" type="submit">Submit</button>
         </fieldset>
       </form>
-      <!-- <table id = "postBoard" class = "postBoard"> -->
+
     </section>
   </div>
 </main>
-<script src="app.js"></script>
 </body>
 </html>

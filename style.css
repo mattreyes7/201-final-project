@@ -1,12 +1,137 @@
+
+/*reminder: use Roboto, Francois One, Lobster*/
+/*green hexid:#74C6A3, grey hexid:#5D5D5D, teal: #00A79D*/
+
+/*---------style for home page----------------------*/
+.logo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  max-height: 250px;
+}
+
+.sub-title {
+  font-weight: lighter;
+  font-stretch: extra-condensed;
+  font-family: Lobster;
+  color: #00A79D;
+  margin: 0;
+}
+
 .nav {
+  justify-content: center;
+  align-items: center;
+}
+.sub-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #74C6A3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.social-media {
+  justify-content: space-around;
+}
+.login {
+  color: #5D5D5D;
+  font-family: Lobster;
+  justify-content: center;
+  align-items: center;
+}
+#submit {
+  color: #00A79D;
+}
+
+label input {
+  font-family: Francois One;
+  padding: 5px;
+}
+
+
+button {
+  font-family: Francois One
+  /*color: #00A79D;*/
+}
+
+legend {
+  font-family: Francois One;
+}
+
+ a {
+   text-decoration: none;
+   color: #00A79D;
+ }
+
+.new-form {
+  width: 300px;
+}
+
+.do-hand {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.text-link {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
+.ask-hand {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.seeker-box, .poster-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+  border: 10px solid #74C6A3;
+  padding: 10px;
+}
+
+main {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+fieldset {
+  border: 1px solid #74C6A3;
+  color: #00A79D;
+  font-family: Francois One;
+}
+/*-------------style for about us page-------------*/
+
+h1 {
+  font-family: Lobster;
+}
+
+.nav {
+  text-align: center;
+  font-family: Francois One;
+}
 .bio-container {
+    font-family: Francois One;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:
 }
 
 
@@ -48,6 +173,10 @@
    margin-right: 2px;
    margin-left: 2px;
 
+}
+
+.person1-bio, .person2-bio, .person3-bio, .person4-bio {
+  font-family: Roboto;
 }
 
 .person1-pic, .person2-pic, .person3-pic, .person4-pic {

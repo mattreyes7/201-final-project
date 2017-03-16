@@ -2,16 +2,16 @@
 
 var table = document.getElementById('postBoard');
 var nameData;
-var jobNumber = 2;
-var users = [];
+var jobNumber = 1;
+var trElement;
 
+// assigning localstorage array to the new variable to use in rendering rows
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
 //console.log(clientArray);
 
 function renderHeader(){
 
-  var table = document.getElementById('postBoard');
-  var trElement = document.createElement('thead');
+  trElement = document.createElement('thead');
   table.appendChild(trElement);
 
   nameData = document.createElement('td');
@@ -47,21 +47,19 @@ function renderHeader(){
 
 renderHeader();
 
-
 //rendering table rows function:
 function renderAsRow(client){
   for (var i = 0; i<clientArray.length; i++){
 
 
     trElement = document.createElement('tr');
-    trElement.setAttribute('class', 'available');
+
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
     trElement.appendChild(nameData);
 
 
     jobNumber++;
-
 
     nameData = document.createElement('td');
     nameData.textContent = client[i].name;
@@ -86,29 +84,36 @@ function renderAsRow(client){
     nameData.textContent = client[i].time;
     trElement.appendChild(nameData);
 
-    var checkbox = document.createElement("INPUT");
+    var checkbox = document.createElement('INPUT');
     checkbox.type = "checkbox";
+
     trElement.appendChild(checkbox);
+
+     // dimming checjbox on click
+    checkbox.addEventListener('click', function() {
+
+     if (this.checked){
+       this.parentElement.setAttribute('class', 'unavailable');
+     } else {
+       this.parentElement.setAttribute('class', 'available');
+     }
+   })
 
     table.appendChild(trElement);
 
-
-    checkbox.addEventListener('click', function() {
-      if (this.checked){
-  this.parentElement.setAttribute('class', 'unavailable');
-} else {
-  this.parentElement.setAttribute('class', 'available');
-}
-      // if (checkbox.checked === false){
-      //   trElement.setAttribute('class', 'unavailable');
-      // } else {
-      //   trElement.setAttribute('class', 'available');
-      // }
-    })
-    // table.appendChild(trElement);
   }
 }
 
 
 renderAsRow(clientArray);
+
+
+
+//redirecting to maps
+document.getElementById('goMaps').addEventListener('click', goToMaps);
+
+function goToMaps(){
+  location.href='job-location.html'
+}
+
 console.log(clientArray);

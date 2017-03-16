@@ -1,7 +1,10 @@
 'use strict'
 var clientArray = [];
+
+var table = document.getElementById('postBoard');
+
 var users = [];
-// var table = document.getElementById('postBoard');
+
 function Client(name, email, descript, loc, time){
   this.name = name;
   this.email = email;
@@ -9,8 +12,10 @@ function Client(name, email, descript, loc, time){
   this.loc = loc;
   this.time = time;
 }
+
 // storing log in info
 document.getElementById('loginSubmit').addEventListener('click', userLs);
+
 function userLs(event){
   event.preventDefault();
   var userName = document.getElementById('userName').value;

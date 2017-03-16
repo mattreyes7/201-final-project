@@ -114,17 +114,17 @@ renderAsRow(clientArray);
 function initMap() {
 
   var citiesCoordinates = [
-    {name:'Seattle', lon:47.6062, lat:122.3321},
-    {name:'redmond', lon:47.6740, lat:122.1215},
-    {name:'Bellevue', lon:47.6101, lat:122.2015}
+    {name:'Seattle', lat:47.6062, lng:-122.3321},
+    {name:'redmond', lat:47.6740, lng:-122.1215},
+    {name:'Bellevue', lat:47.6101, lng:-122.2015}
   ];
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: {lat:120, lng:50}
+    zoom: 10,
+    center: {lat:47.6062, lng:-122.3321}
   });
   for (i=0; i<citiesCoordinates.length;i++){
     var marker = new google.maps.Marker({
-      position: {lat: citiesCoordinates[i].lat, lng: citiesCoordinates[i].lon},
+      position: {lat: citiesCoordinates[i].lat, lng: citiesCoordinates[i].lng},
       map: map
     });
   }

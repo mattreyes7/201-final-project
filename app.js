@@ -1,7 +1,12 @@
+
+
+'use strict'
 var clientArray = [];
+
 var table = document.getElementById('postBoard');
-new Vivus('animateLogo', {type: 'sync', duration: 200};
-);
+
+var users = [];
+
 function Client(name, email, descript, loc, time){
 
   this.name = name;
@@ -12,98 +17,21 @@ function Client(name, email, descript, loc, time){
 
 }
 
-// Creating a Post-Board Table
-//creating a table header function:
-var nameData;
-var favorNumber = 1;
-function renderHeader(){
-
-  var table = document.getElementById('postBoard');
-  var trElement = document.createElement('thead');
-  table.appendChild(trElement);
-
-  nameData = document.createElement('td');
-  nameData.textContent = " Favor #";
-  trElement.appendChild(nameData);
+// storing log in info
+document.getElementById('loginSubmit').addEventListener('click', userLs);
 
 
-  nameData = document.createElement('td');
-  nameData.textContent = "Name";
-  trElement.appendChild(nameData);
+function userLs(event){
+  event.preventDefault();
+  var userName = document.getElementById('userName').value;
+  var password = document.getElementById('password').value;
+  document.getElementById('greet').textContent = 'Hello, ' +  userName + '!';
 
-  nameData = document.createElement('td');
-  nameData.textContent = "E-mail";
-  trElement.appendChild(nameData);
+  users.push([userName, password]);
+  localStorage.setItem('lsUsers', JSON.stringify(users));
+}
 
-  nameData = document.createElement('td');
-  nameData.textContent = "Job Description";
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = "Location";
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = "Time Frame";
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = "Accept job";
-  trElement.appendChild(nameData);
-
-};
-
-renderHeader();
-
-
-//rendering table rows function:
-  renderAsRow = function(Client){
-
-  trElement = document.createElement('tr');
-
-  nameData = document.createElement('td');
-  nameData.textContent = favorNumber;
-  trElement.appendChild(nameData);
-
-  favorNumber++;
-
-
-  nameData = document.createElement('td');
-  nameData.textContent = Client.name;
-  trElement.appendChild(nameData);
-
-
-  nameData = document.createElement('td');
-  nameData.textContent = Client.email;
-  trElement.appendChild(nameData);
-
-
-  nameData = document.createElement('td');
-  nameData.textContent = Client.descript;
-  trElement.appendChild(nameData);
-
-
-  nameData = document.createElement('td');
-  nameData.textContent = Client.loc;
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = Client.time;
-  trElement.appendChild(nameData);
-
-  var checkbox = document.createElement("INPUT");
-  checkbox.type = "checkbox";
-  trElement.appendChild(checkbox);
-
-  table.appendChild(trElement);
-  checkbox.addEventListener("click", function() {
-     alert('Good Luck!!');
-   })
- };
-
-
-
-  function handleForm(event){
+function handleForm(event){
   event.preventDefault();
   console.log('handle form');
   var name = event.target.name.value;
@@ -111,16 +39,25 @@ renderHeader();
   var descript = event.target.descript.value;
   var loc = event.target.loc.value;
   var time = event.target.time.value;
-  var newClient = new Client(name, email, descript, loc, time);
-  clientArray.push(newClient);
-  console.log(newClient);
 
-  renderAsRow(newClient);
-  // event.target.name.value = null;
-  // event.target.email.value = null;
-  // event.target.descript.value = null;
-  // event.target.loc.value = null;
-  // event.target.time.value = null;
+  var newClient = new Client(name, email, descript, loc, time);
+
+  //restoring old entries to the aray of clients
+  if (localStorage.lsClientArray) {
+    var oldClients = JSON.parse(localStorage.getItem('lsClientArray'));
+    //console.log('oldClients:' +oldClients)
+    clientArray = oldClients;
+    //console.log(clientArray);
+  }
+
+  clientArray.push(newClient);
+
+  //saving clients to the local storage
+  localStorage.setItem('lsClientArray', JSON.stringify(clientArray));
+
+  // sending user to the postboard page
+  location.href='postboard.html'
+
 }
 
 var form  = document.getElementById('addForm');

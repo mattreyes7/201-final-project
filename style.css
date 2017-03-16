@@ -10,10 +10,6 @@
   align-items: center;
 }
 
-.animate-container {
-  max-width: 500px;
-  max-height: 250px;
-}
 .logo-image {
   align-items: center;
   justify-content: center;
@@ -226,6 +222,14 @@ td {
 tr {
   background-color: grey;
 }
-=======
+
+.available {
+  color: black;
+}
+
+.unavailable {
+  color: grey;
+}
+
 
 /*************End of post-board styles****************/

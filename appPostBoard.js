@@ -82,6 +82,7 @@ renderAsRow = function(client){
 
     var checkbox = document.createElement('INPUT');
     checkbox.type = "checkbox";
+
     trElement.appendChild(checkbox);
 
      // dimming checjbox on click
@@ -99,6 +100,8 @@ renderAsRow = function(client){
 }
 renderAsRow(clientArray);
 
+
+
 //redirecting to maps
 document.getElementById('goMaps').addEventListener('click', goToMaps);
 
@@ -106,12 +109,4 @@ function goToMaps(){
   location.href='job-location.html'
 }
 
-
-// document.getElementsByTagName('INPUT').addEventListener('click', function() {
-//   if (checkbox.checked){
-//     trElement.setAttribute('class', 'unavailable');
-//   } else {
-//     trElement.setAttribute('class', 'available');
-//   }
-// })
 console.log(clientArray);

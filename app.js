@@ -44,7 +44,9 @@ function handleForm(event){
   //saving clients to the local storage
   localStorage.setItem('lsClientArray', JSON.stringify(clientArray));
   // sending user to the postboard page
+
   location.href='postboard.html'
+
 }
 var form  = document.getElementById('addForm');
 form.addEventListener('submit', handleForm);

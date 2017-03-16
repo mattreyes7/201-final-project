@@ -94,31 +94,38 @@ function renderAsRow(client){
     trElement.appendChild(checkbox);
 
 
-     // dimming checjbox on click
+    // dimming checjbox on click
     checkbox.addEventListener('click', function() {
 
-     if (this.checked){
-       this.parentElement.setAttribute('class', 'unavailable');
-     } else {
-       this.parentElement.setAttribute('class', 'available');
-     }
-   })
+      if (this.checked){
+        this.parentElement.setAttribute('class', 'unavailable');
+      } else {
+        this.parentElement.setAttribute('class', 'available');
+      }
+    })
 
     table.appendChild(trElement);
 
   }
 }
 
-
 renderAsRow(clientArray);
 
+function initMap() {
 
-
-//redirecting to maps
-document.getElementById('goMaps').addEventListener('click', goToMaps);
-
-function goToMaps(){
-  location.href='job-location.html'
+  var citiesCoordinates = [
+    {name:'Seattle', lon:47.6062, lat:122.3321},
+    {name:'redmond', lon:47.6740, lat:122.1215},
+    {name:'Bellevue', lon:47.6101, lat:122.2015}
+  ];
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: {lat:120, lng:50}
+  });
+  for (i=0; i<citiesCoordinates.length;i++){
+    var marker = new google.maps.Marker({
+      position: {lat: citiesCoordinates[i].lat, lng: citiesCoordinates[i].lon},
+      map: map
+    });
+  }
 }
-
-console.log(clientArray);

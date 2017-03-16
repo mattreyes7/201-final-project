@@ -195,10 +195,11 @@ h1 {
 
 }
 
-/*****************Post-board table styles****************/
+/*****************Post-board page styles****************/
 table{
   border: solid 2px blue;
   margin-left: 15%;
+  margin-bottom: 5%;
 }
 
 thead{
@@ -224,11 +225,11 @@ tr {
   background-color: grey;
 }
 
-.available {
-<<<<<<< HEAD
+.jobsMap{
+  margin-left: 30%;
+}
 
-=======
->>>>>>> 928c8f8d002c06ee81ee5f4a6d778d81d7e48c58
+.available {
   color: black;
 }
 
@@ -236,5 +237,8 @@ tr {
   color: grey;
 }
 
-
+.map {
+        height: 400px;
+        width: 100%;
+       }
 /*************End of post-board styles****************/

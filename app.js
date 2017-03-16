@@ -1,6 +1,7 @@
 var clientArray = [];
 var table = document.getElementById('postBoard');
-
+new Vivus('animateLogo', {type: 'sync', duration: 200};
+);
 function Client(name, email, descript, loc, time){
 
   this.name = name;

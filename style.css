@@ -1,6 +1,6 @@
 
 /*reminder: use Roboto, Francois One, Lobster*/
-/*green hexid:#74C6A3, grey hexid:#00A79D*, teal: #00A79D/
+/*green hexid:#74C6A3, grey hexid:#5D5D5D, teal: #00A79D*/
 
 /*---------style for home page----------------------*/
 .logo-info {
@@ -8,6 +8,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.animate-container {
+  max-width: 500px;
+  max-height: 250px;
 }
 .logo-image {
   align-items: center;
@@ -42,7 +47,7 @@
   justify-content: space-around;
 }
 .login {
-  color: #00A79D;
+  color: #5D5D5D;
   font-family: Lobster;
   justify-content: center;
   align-items: center;

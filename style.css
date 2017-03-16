@@ -224,11 +224,11 @@ tr {
 }
 
 .available {
-  color: red;
+  color: black;
 }
 
 .unavailable {
-  color: yellow;
+  color: grey;
 }
 
 

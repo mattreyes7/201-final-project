@@ -224,6 +224,14 @@ tr {
 }
 
 .available {
+<<<<<<< HEAD
+  color: black;
+}
+
+.unavailable {
+  color: grey;
+}
+=======
   color: red;
 }
 
@@ -231,5 +239,6 @@ tr {
   color: yellow;
 }
 
+>>>>>>> f4a2301e432183d8a0c47c768d6828c720e899c4
 
 /*************End of post-board styles****************/

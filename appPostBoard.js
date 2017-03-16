@@ -2,10 +2,12 @@
 
 var table = document.getElementById('postBoard');
 var nameData;
+
 var jobNumber = 1;
 var trElement;
 
 // assigning localstorage array to the new variable to use in rendering rows
+
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
 //console.log(clientArray);
 
@@ -54,6 +56,8 @@ function renderAsRow(client){
 
     trElement = document.createElement('tr');
 
+    trElement = document.createElement('tr');
+    trElement.setAttribute('class', 'available');
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
     trElement.appendChild(nameData);
@@ -88,6 +92,7 @@ function renderAsRow(client){
     checkbox.type = "checkbox";
 
     trElement.appendChild(checkbox);
+
 
      // dimming checjbox on click
     checkbox.addEventListener('click', function() {

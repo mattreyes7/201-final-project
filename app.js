@@ -56,7 +56,7 @@ function handleForm(event){
   localStorage.setItem('lsClientArray', JSON.stringify(clientArray));
 
   // sending user to the postboard page
-  location.href='postboard.html'
+  location.href='postboard.html';
 
 }
 

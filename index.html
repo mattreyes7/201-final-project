@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Outsource Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+
+      <div class="logo-info">
+        <h1 class ="sub-title">Outsource Me</h1>
+      </div>
+
+      <div class="social-media">
+        <a href="https://www.facebook.com"><img src="assets/fb-icon.png"></a>
+        <a href="https://www.instagram.com"><img src="assets/insta-icon.png"></a>
+        <a href="https://twitter.com"><img src="assets/twit-icon.png"></a>
+      </div>
+
+      <div>
+        <label for="userName">Login:</label>
+        <input id="userName" type="text" name="name" placeholder="Username">
+        <input id="password" type="password" name="password" placeholder="Password">
+        <button id="loginSubmit" type="click">Submit</button>
+      </div>
+
+      <div class = "nav">
+
+          <a href = "index.html">Home</a>
+          <a href = "aboutus.html">About Us</a>
+
+      </div>
+
+    </header>
+  <main>
+  <div class="seeker-box">
+    <p id = "greet">Hello, guest!</p>
+    <a href="postboard.html">Find A Job</a>
+  </div>
+  <div class="poster-box">
+    <section class="new-form">
+
+      <form id="addForm">
+        <fieldset>
+          <legend>New Job</legend>
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Name">
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input id="email" type="text" name="email" placeholder="Email">
+          </div>
+          <div>
+            <label for="descript">Job Description:</label>
+            <input id="descript" type="text" name="descript" placeholder="Job Description">
+          </div>
+          <div>
+            <label for="loc">Job Location:</label>
+            <input id="loc" type="text" name="loc" placeholder="Job Location">
+          </div>
+          <div>
+            <label for="timeFrame">Time frame:</label>
+            <input id="time" type="text" name="time" placeholder="timeFrame">
+          </div>
+          <button id="submit" type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <!-- <table id = "postBoard" class = "postBoard"> -->
+    </section>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

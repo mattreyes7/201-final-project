@@ -1,3 +1,5 @@
+// 'use strict'
+
 var table = document.getElementById('postBoard');
 var nameData;
 var jobNumber = 1;
@@ -46,14 +48,16 @@ function renderHeader(){
 renderHeader();
 
 //rendering table rows function:
-renderAsRow = function(client){
-  for (i = 0; i<clientArray.length; i++){
+function renderAsRow(client){
+  for (var i = 0; i<clientArray.length; i++){
+
 
     trElement = document.createElement('tr');
 
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
     trElement.appendChild(nameData);
+
 
     jobNumber++;
 
@@ -87,6 +91,7 @@ renderAsRow = function(client){
 
      // dimming checjbox on click
     checkbox.addEventListener('click', function() {
+
      if (this.checked){
        this.parentElement.setAttribute('class', 'unavailable');
      } else {
@@ -98,6 +103,8 @@ renderAsRow = function(client){
 
   }
 }
+
+
 renderAsRow(clientArray);
 
 

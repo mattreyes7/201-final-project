@@ -35,137 +35,141 @@ function renderHeader(){
 
 
 
-//console.log(clientArray);
-function renderHeader() {
-  trElement = document.createElement('thead');
-  table.appendChild(trElement);
-
-  nameData = document.createElement('td');
-  nameData.textContent = ' Job #';
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = 'Name';
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = 'E-mail';
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = 'Job Description';
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-
-  nameData.textContent = "City";
-
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = 'Time Frame';
-  trElement.appendChild(nameData);
-
-  nameData = document.createElement('td');
-  nameData.textContent = 'Accept job';
-  trElement.appendChild(nameData);
-
-};
-
-renderHeader();
-
-//rendering table rows function:
-function renderAsRow(client) {
-  for (var i = 0; i < clientArray.length; i++) {
-
-    trElement = document.createElement('tr');
-
-
-    trElement.setAttribute('class', 'available');
-    nameData = document.createElement('td');
-    nameData.textContent = jobNumber;
-
-    trElement.appendChild(nameData);
-
-
-    jobNumber++;
-
-    nameData = document.createElement('td');
-    nameData.textContent = client[i].name;
-    trElement.appendChild(nameData);
-
-
-    nameData = document.createElement('td');
-    nameData.textContent = client[i].email;
-    trElement.appendChild(nameData);
-
-
-    nameData = document.createElement('td');
-    nameData.textContent = client[i].descript;
-    trElement.appendChild(nameData);
-
-
-    nameData = document.createElement('td');
-    nameData.textContent = client[i].loc;
-    cityName = client[i].loc.toLowerCase();
-    clientEnteredCities.push(cityName);
-    trElement.appendChild(nameData);
-
-    nameData = document.createElement('td');
-    nameData.textContent = client[i].time;
-    trElement.appendChild(nameData);
-
-    var checkbox = document.createElement('INPUT');
-    checkbox.type = "checkbox";
-
-    trElement.appendChild(checkbox);
-
-
-    // dimming checjbox on click
-    checkbox.addEventListener('click', function() {
-
-
-      if (this.checked){
-
-        this.parentElement.setAttribute('class', 'unavailable');
-      } else {
-        this.parentElement.setAttribute('class', 'available');
-      }
-
-      notifyPoster(this);
-      console.log(checkbox.checked);
-    })
-
-    function notifyPoster(event) {
-      if (event.checked) {
-        alert('Thank you! A message has been sent to the poster of the favor.');
-      } else {
-        alert('Please make another selection.');
-      }
-    }
-
+  //console.log(clientArray);
+  function renderHeader() {
+    trElement = document.createElement('thead');
     table.appendChild(trElement);
 
+    nameData = document.createElement('td');
+    nameData.textContent = ' Job #';
+    trElement.appendChild(nameData);
+
+    nameData = document.createElement('td');
+    nameData.textContent = 'Name';
+    trElement.appendChild(nameData);
+
+    nameData = document.createElement('td');
+    nameData.textContent = 'E-mail';
+    trElement.appendChild(nameData);
+
+    nameData = document.createElement('td');
+    nameData.textContent = 'Job Description';
+    trElement.appendChild(nameData);
+
+    nameData = document.createElement('td');
+
+    nameData.textContent = "City";
+
+    trElement.appendChild(nameData);
+
+    nameData = document.createElement('td');
+    nameData.textContent = 'Time Frame';
+    trElement.appendChild(nameData);
+
+    nameData = document.createElement('td');
+    nameData.textContent = 'Accept job';
+    trElement.appendChild(nameData);
+
+  };
+
+  renderHeader();
+
+  //rendering table rows function:
+  function renderAsRow(client) {
+    for (var i = 0; i < clientArray.length; i++) {
+
+      trElement = document.createElement('tr');
+
+
+      trElement.setAttribute('class', 'available');
+      nameData = document.createElement('td');
+      nameData.textContent = jobNumber;
+
+      trElement.appendChild(nameData);
+
+
+      jobNumber++;
+
+      nameData = document.createElement('td');
+      nameData.textContent = client[i].name;
+      trElement.appendChild(nameData);
+
+
+      nameData = document.createElement('td');
+      nameData.textContent = client[i].email;
+      trElement.appendChild(nameData);
+
+
+      nameData = document.createElement('td');
+      nameData.textContent = client[i].descript;
+      trElement.appendChild(nameData);
+
+
+      nameData = document.createElement('td');
+      nameData.textContent = client[i].loc;
+      cityName = client[i].loc.toLowerCase();
+      clientEnteredCities.push(cityName);
+      trElement.appendChild(nameData);
+
+      nameData = document.createElement('td');
+      nameData.textContent = client[i].time;
+      trElement.appendChild(nameData);
+
+      var checkbox = document.createElement('INPUT');
+      checkbox.type = "checkbox";
+
+      trElement.appendChild(checkbox);
+
+
+      // dimming checjbox on click
+      checkbox.addEventListener('click', function() {
+
+
+        if (this.checked){
+
+          this.parentElement.setAttribute('class', 'unavailable');
+        } else {
+          this.parentElement.setAttribute('class', 'available');
+        }
+
+        notifyPoster(this);
+        console.log(checkbox.checked);
+      })
+
+      function notifyPoster(event) {
+        if (event.checked) {
+          alert('Thank you! A message has been sent to the poster of the favor.');
+        } else {
+          alert('Please make another selection.');
+        }
+      }
+
+      table.appendChild(trElement);
+
+    }
   }
-}
-console.log(clientEnteredCities);
+  console.log(clientEnteredCities);
 
-renderAsRow(clientArray);
+  renderAsRow(clientArray);
 
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: {lat:47.6062, lng:-122.3321}
-  });
-  for (i=0; i<clientEnteredCities.length; i++){
-    console.log('client i '+ clientEnteredCities[i]);
-    var index = cityNamesArray.indexOf(clientEnteredCities[i]);
-    console.log(index);
-    console.log(citiesCoordinates[index]);
-    var marker = new google.maps.Marker({
-      position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
-      map: map
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: {lat:47.6062, lng:-122.3321}
     });
+    for (i=0; i<clientEnteredCities.length; i++){
+      console.log('client i '+ clientEnteredCities[i]);
+      var index = cityNamesArray.indexOf(clientEnteredCities[i]);
+      console.log(index);
+      if (index!==-1){
+        console.log(citiesCoordinates[index]);
+        var marker = new google.maps.Marker({
+          position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
+          map: map
+        });
+      } else {
+        alert('Please, go back to the form page and check your spelling')
+      }
+    }
   }
-}
-//position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},
+  //position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},

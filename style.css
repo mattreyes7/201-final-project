@@ -5,7 +5,7 @@
 /*---------style for home page----------------------*/
 @font-face {
     font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
-    src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
+    src: local('assets/Roboto-Regular.ttf'),local('assets/FrancoisOne-Regular.ttf'), local('assets/Lobster-Regular.ttf');
 }
 /*--------------header styles-----------------------*/
 .logo-container {

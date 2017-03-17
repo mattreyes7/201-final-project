@@ -27,9 +27,6 @@ var citiesCoordinates = [
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
 'bothel', 'new castle', 'renton', 'issaquah', 'carnation' ];
-function renderHeader(){
-
-
 
 //console.log(clientArray);
 function renderHeader() {

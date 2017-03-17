@@ -1,9 +1,14 @@
 
-/*reminder: use Roboto, Francois One, Lobster*/
-/*green hexid:#74C6A3, grey hexid:#5D5D5D, teal: #00A79D*/
+/*reminder: use Roboto, FrancoisOne-Regular, Lobster*/
+/*green hexid:#8CC63E, grey hexid:#5D5D5D, teal: #00A79D*/
 
 /*---------style for home page----------------------*/
-.logo-info {
+@font-face {
+    font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
+    src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
+}
+/*--------------header styles-----------------------*/
+.logo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,10 +40,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #74C6A3;
+  background-color: #8CC63E;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 5px;
+}
+
+.greeting {
+  font-size: 60px;
+  text-align: center;
+  font-weight: lighter;
+  font-stretch: extra-condensed;
+  font-family: Lobster;
+  color: white;
+  margin: 0;
 }
 .social-media {
   justify-content: space-around;
@@ -54,23 +69,41 @@
 }
 
 label input {
-  font-family: Francois One;
+  font-family: FrancoisOne-Regular;
   padding: 5px;
 }
 
 
 button {
-  font-family: Francois One
+  font-family: FrancoisOne-Regular
   /*color: #00A79D;*/
 }
 
 legend {
-  font-family: Francois One;
+  font-family: FrancoisOne-Regular;
 }
 
  a {
+   font-family: FrancoisOne-Regular;
+   font-size: 20px;
    text-decoration: none;
-   color: #00A79D;
+   color: white;
+ }
+ .home-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: FrancoisOne-Regular;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+ .about-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: FrancoisOne-Regular;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
  }
 
 .new-form {
@@ -85,14 +118,18 @@ legend {
 .text-link {
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
+  color: #00A79D;
+  font-family: FrancoisOne-Regular;
+  font-size: 30px;
+
 }
 .ask-hand {
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+
 .seeker-box, .poster-box {
   display: flex;
   justify-content: center;
@@ -100,11 +137,12 @@ legend {
   align-items: center;
   margin: 10px;
   border-radius: 10px;
-  border: 10px solid #74C6A3;
+  border: 10px solid #8CC63E;
   padding: 10px;
 }
 
 main {
+  margin-top: 30px;
   justify-content: center;
   align-content: center;
   display: flex;
@@ -113,9 +151,9 @@ main {
 }
 
 fieldset {
-  border: 1px solid #74C6A3;
+  border: 1px solid #8CC63E;
   color: #00A79D;
-  font-family: Francois One;
+  font-family: FrancoisOne-Regular;
 }
 /*-------------style for about us page-------------*/
 
@@ -123,12 +161,14 @@ h1 {
   font-family: Lobster;
 }
 
-.nav {
+/*.nav {
+  align-content: space-around;
   text-align: center;
-  font-family: Francois One;
-}
+  font-family: FrancoisOne-Regular;
+}*/
+
 .bio-container {
-    font-family: Francois One;
+    font-family: FrancoisOne-Regular;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -177,7 +217,7 @@ h1 {
 }
 
 .person1-bio, .person2-bio, .person3-bio, .person4-bio {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
 }
 
 .person1-pic, .person2-pic, .person3-pic, .person4-pic {
@@ -195,10 +235,11 @@ h1 {
 
 }
 
-/*****************Post-board table styles****************/
+/*****************Post-board page styles****************/
 table{
   border: solid 2px blue;
   margin-left: 15%;
+  margin-bottom: 5%;
 }
 
 thead{
@@ -224,6 +265,11 @@ tr {
   background-color: grey;
 }
 
+
+.jobsMap{
+  margin-left: 30%;
+}
+
 .available {
 
   color: black;
@@ -233,5 +279,10 @@ tr {
   color: grey;
 }
 
+
+.map {
+        height: 300px;
+        width: 60%;
+       }
 
 /*************End of post-board styles****************/

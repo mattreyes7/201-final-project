@@ -236,6 +236,22 @@ h1 {
 }
 
 /*****************Post-board page styles****************/
+.posBoard-h1{
+  margin-left: 40%;
+  font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
+  src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
+}
+
+}
+.postboard-container{
+  float:left;
+  width:60%;
+}
+  .map{
+    float: left;
+    width:35%;
+
+  }
 table{
   border: solid 2px blue;
   margin-left: 15%;
@@ -265,7 +281,10 @@ tr {
   background-color: grey;
 }
 
-nav{background-color:#00A79D }
+.navBoard{
+  background-color:#00A79D;
+  display: inline;
+}
 
 body{background-color:#8CC63E }
 

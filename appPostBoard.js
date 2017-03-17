@@ -138,7 +138,7 @@ function locateJob(cityName){
     cityMarker = index;
   }
   initMap();
-  return('');
+  return '';
 }
 
 function initMap() {

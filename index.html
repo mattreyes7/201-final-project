@@ -5,15 +5,20 @@
   <meta charset="utf-8">
   <title>Favor</title>
   <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.0/vivus.min.js"></script> -->
 </head>
 
 <body>
   <header>
-
+    <div class ="logo-container">
+      <object id="animateLogo" type="image/svg+xml" data="assets/favrlogo.svg"></object>
+      <!-- <object id="animateLogo" type="image/svg+xml" data="assets/favrlogo3.svg"></object> -->
+      <div class ="logo-image">
+    </div>
     <h2 class ="sub-title">Lend a Hand</h2>
 
   <div class="sub-header">
-    <div class="social-media">
+    <div class="social-media-box">
       <a href="https://www.facebook.com"><img src="assets/fb.png"></a>
       <a href="https://www.instagram.com"><img src="assets/insta.png"></a>
       <a href="https://twitter.com"><img src="assets/twit.png"></a>
@@ -25,24 +30,23 @@
       <input id="password" type="password" name="password" placeholder="Password">
       <button id="loginSubmit" class="submit" type="submit">Submit</button>
     </div>
-    <p id = "greet">Hello, guest!</p>
+    <p class="greeting" id = "greet">Hello, guest!</p>
   </div>
   <div class = "nav">
 
-    <a href = "index.html">Home</a>
-    <a href = "aboutus.html">About Us</a>
+    <a class="home-button" href = "index.html">Home</a>
+    <a class="about-button" href = "aboutus.html">About Us</a>
 
   </div>
 
 </header>
 <main>
-  <div class="seeker-box">
+  <a class="seeker-box" href="postboard.html" >
 
-    <a href="postboard.html">Find A Job</a>
-    <a href="postboard.html"><img class="do-hand" src="assets/dohand.png"></a>
-    <div class="text-link"><a href="postboard.html">Do A Favor</a></div>
+    <img class="do-hand" src="assets/dohand.png">
+    <p class="text-link">Do A Favor</p>
 
-  </div>
+  </a>
   <div class="poster-box">
     <img class="ask-hand" src="assets/askhand.png">
     <section class="new-form">

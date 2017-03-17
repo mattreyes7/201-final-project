@@ -34,7 +34,7 @@ function renderHeader(){
   trElement.appendChild(nameData);
 
   nameData = document.createElement('td');
-  nameData.textContent = "Location";
+  nameData.textContent = "City";
   trElement.appendChild(nameData);
 
   nameData = document.createElement('td');
@@ -114,9 +114,16 @@ renderAsRow(clientArray);
 function initMap() {
 
   var citiesCoordinates = [
-    {name:'Seattle', lat:47.6062, lng:-122.3321},
+    {name:'seattle', lat:47.6062, lng:-122.3321},
     {name:'redmond', lat:47.6740, lng:-122.1215},
-    {name:'Bellevue', lat:47.6101, lng:-122.2015}
+    {name:'bellevue', lat:47.6101, lng:-122.2015},
+    {name:'sammamish', lat:47.6163, lng:-122.0356},
+    {name:'kirkland', lat: 47.6769,  lng:-122.2060},
+    {name:'mercer island', lat: 7.5707, lng:-122.2221},
+    {name: 'bothel', lat: 7.7610, lng:-122.2056},
+    {name: 'new castle', lat: 47.5390, lng:-122.1557},
+    {name:'renton', lat: 47.4829, lng:-122.2171},
+    {name: 'issaquah', lat: 47.5301, lng: -122.0326}
   ];
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,

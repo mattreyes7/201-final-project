@@ -27,7 +27,7 @@ var citiesCoordinates = [
   {name: 'kent', lat:47.3809, lng:-122.2348}
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
-'bothel', 'new castle', 'renton', 'issaquah', 'carnation' ];
+'bothel', 'new castle', 'renton', 'issaquah', 'carnation', 'kent' ];
 
 var clientEnteredCities = [];
 //console.log(clientArray);

@@ -27,14 +27,9 @@ var citiesCoordinates = [
   {name: 'kent', lat:47.3809, lng:-122.2348}
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
+
 'bothel', 'new castle', 'renton', 'issaquah', 'carnation' ,'kent'];
 var clientEnteredCities = [];
-
-
-function renderHeader(){
-
-
-
 //console.log(clientArray);
 function renderHeader() {
   trElement = document.createElement('thead');
@@ -157,6 +152,7 @@ function initMap() {
     zoom: 10,
     center: {lat:47.6062, lng:-122.3321}
   });
+
   for (i=0; i<clientEnteredCities.length; i++){
     console.log('client i '+ clientEnteredCities[i]);
     var index = cityNamesArray.indexOf(clientEnteredCities[i]);
@@ -168,4 +164,3 @@ function initMap() {
     });
   }
 }
-//position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},

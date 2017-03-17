@@ -235,10 +235,11 @@ h1 {
 
 }
 
-/*****************Post-board table styles****************/
+/*****************Post-board page styles****************/
 table{
   border: solid 2px blue;
   margin-left: 15%;
+  margin-bottom: 5%;
 }
 
 thead{
@@ -264,6 +265,11 @@ tr {
   background-color: grey;
 }
 
+
+.jobsMap{
+  margin-left: 30%;
+}
+
 .available {
 
   color: black;
@@ -273,5 +279,8 @@ tr {
   color: grey;
 }
 
-
+.map {
+        height: 300px;
+        width: 60%;
+       }
 /*************End of post-board styles****************/

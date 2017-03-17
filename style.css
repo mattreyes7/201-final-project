@@ -233,11 +233,5 @@ tr {
   color: grey;
 }
 
-.postboard-container{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-
-}
 
 /*************End of post-board styles****************/

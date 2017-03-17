@@ -23,14 +23,13 @@ var citiesCoordinates = [
   {name: 'new castle', lat: 47.5390, lng:-122.1557},
   {name:'renton', lat: 47.4829, lng:-122.2171},
   {name: 'issaquah', lat: 47.5301, lng: -122.0326},
-  {name: 'carnation', lat:47.6479, lng:-121.914}
+  {name: 'carnation', lat:47.6479, lng:-121.914},
+  {name: 'kent', lat:47.3809, lng:-122.2348}
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
-'bothel', 'new castle', 'renton', 'issaquah', 'carnation' ];
 
-
-
-
+'bothel', 'new castle', 'renton', 'issaquah', 'carnation' ,'kent'];
+var clientEnteredCities = [];
 //console.log(clientArray);
 function renderHeader() {
   trElement = document.createElement('thead');
@@ -104,7 +103,7 @@ function renderAsRow(client) {
     nameData = document.createElement('td');
     nameData.textContent = client[i].loc;
     cityName = client[i].loc.toLowerCase();
-    console.log(cityName);
+    clientEnteredCities.push(cityName);
     trElement.appendChild(nameData);
 
     nameData = document.createElement('td');
@@ -141,34 +140,27 @@ function renderAsRow(client) {
     }
 
     table.appendChild(trElement);
-    locateJob(cityName);
+
   }
 }
+console.log(clientEnteredCities);
 
 renderAsRow(clientArray);
-
-function locateJob(cityName){
-  var index =cityNamesArray.indexOf(cityName);
-  console.log(index);
-  if (index ===-1) {
-    cityMarker = 11;
-  } else {
-    cityMarker = index;
-  }
-  initMap();
-  return '';
-}
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
     center: {lat:47.6062, lng:-122.3321}
   });
-//for (i=0; i<citiesCoordinates.length;i++){
-  var marker = new google.maps.Marker({
-    position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},
-    map: map
-  });
- }
 
-  //position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},
+  for (i=0; i<clientEnteredCities.length; i++){
+    console.log('client i '+ clientEnteredCities[i]);
+    var index = cityNamesArray.indexOf(clientEnteredCities[i]);
+    console.log(index);
+    console.log(citiesCoordinates[index]);
+    var marker = new google.maps.Marker({
+      position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
+      map: map
+    });
+  }
+}

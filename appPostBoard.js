@@ -27,8 +27,10 @@ var citiesCoordinates = [
   {name: 'kent', lat:47.3809, lng:-122.2348}
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
+
 'bothel', 'new castle', 'renton', 'issaquah', 'carnation' ,'kent'];
 var clientEnteredCities = [];
+<<<<<<< HEAD
 
 
 function renderHeader(){
@@ -39,6 +41,12 @@ function renderHeader(){
   function renderHeader() {
     trElement = document.createElement('thead');
     table.appendChild(trElement);
+=======
+//console.log(clientArray);
+function renderHeader() {
+  trElement = document.createElement('thead');
+  table.appendChild(trElement);
+>>>>>>> a19bd53cd8e750af0d6b92a717402841cd640190
 
     nameData = document.createElement('td');
     nameData.textContent = ' Job #';
@@ -148,6 +156,7 @@ function renderHeader(){
 
     }
   }
+
   console.log(clientEnteredCities);
 
   renderAsRow(clientArray);
@@ -156,6 +165,27 @@ function renderHeader(){
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
       center: {lat:47.6062, lng:-122.3321}
+
+}
+console.log(clientEnteredCities);
+
+renderAsRow(clientArray);
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: {lat:47.6062, lng:-122.3321}
+  });
+
+  for (i=0; i<clientEnteredCities.length; i++){
+    console.log('client i '+ clientEnteredCities[i]);
+    var index = cityNamesArray.indexOf(clientEnteredCities[i]);
+    console.log(index);
+    console.log(citiesCoordinates[index]);
+    var marker = new google.maps.Marker({
+      position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
+      map: map
+>>>>>>> a19bd53cd8e750af0d6b92a717402841cd640190
     });
     for (i=0; i<clientEnteredCities.length; i++){
       console.log('client i '+ clientEnteredCities[i]);
@@ -172,4 +202,8 @@ function renderHeader(){
       }
     }
   }
+<<<<<<< HEAD
   //position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},
+=======
+}
+>>>>>>> a19bd53cd8e750af0d6b92a717402841cd640190

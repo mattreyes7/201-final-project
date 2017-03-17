@@ -265,18 +265,12 @@ tr {
 }
 
 .available {
+
   color: black;
 }
 
 .unavailable {
   color: grey;
-}
-
-  color: red;
-}
-
-.unavailable {
-  color: yellow;
 }
 
 

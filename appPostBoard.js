@@ -166,6 +166,6 @@ function initMap() {
     position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},
     map: map
   });
-//  }
-}
+ }
+
   //position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},

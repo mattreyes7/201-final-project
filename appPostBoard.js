@@ -24,29 +24,25 @@ var citiesCoordinates = [
   {name:'renton', lat: 47.4829, lng:-122.2171},
   {name: 'issaquah', lat: 47.5301, lng: -122.0326},
   {name: 'carnation', lat:47.6479, lng:-121.914},
-  {name: 'kent', lat:47.3809, lng:-122.2348}
+  {name: 'kent', lat:47.3809, lng:-122.2348},
+  {name: 'tukwila', lat:47.4740 , lng:-122.2610},
+  {name: 'woodinville', lat:47.7543 , lng: -122.1635},
+  {name: 'lynnwood', lat:47.8209 , lng:-122.3151 },
+  {name: 'tacoma', lat:47.2529 , lng:-122.4443},
+  {name: 'puyallup', lat: 47.1854, lng:-122.2929 },
 ];
-var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
-
-'bothel', 'new castle', 'renton', 'issaquah', 'carnation' ,'kent'];
+var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island','bothel', 'new castle', 'renton', 'issaquah', 'carnation' ,
+'kent', 'tukwila', 'woodinville', 'lynwood', 'tacoma', 'puyallup'];
 var clientEnteredCities = [];
-<<<<<<< HEAD
 
 
 function renderHeader(){
-
-
 
   //console.log(clientArray);
   function renderHeader() {
     trElement = document.createElement('thead');
     table.appendChild(trElement);
-=======
-//console.log(clientArray);
-function renderHeader() {
-  trElement = document.createElement('thead');
-  table.appendChild(trElement);
->>>>>>> a19bd53cd8e750af0d6b92a717402841cd640190
+
 
     nameData = document.createElement('td');
     nameData.textContent = ' Job #';
@@ -143,6 +139,7 @@ function renderHeader() {
         notifyPoster(this);
         console.log(checkbox.checked);
       })
+          renderAsRow(clientArray);
 
       function notifyPoster(event) {
         if (event.checked) {
@@ -161,49 +158,39 @@ function renderHeader() {
 
   renderAsRow(clientArray);
 
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
-      center: {lat:47.6062, lng:-122.3321}
+    console.log(clientEnteredCities);
 
-}
-console.log(clientEnteredCities);
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: {lat:47.6062, lng:-122.3321}
+      });
 
-renderAsRow(clientArray);
-
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: {lat:47.6062, lng:-122.3321}
-  });
-
-  for (i=0; i<clientEnteredCities.length; i++){
-    console.log('client i '+ clientEnteredCities[i]);
-    var index = cityNamesArray.indexOf(clientEnteredCities[i]);
-    console.log(index);
-    console.log(citiesCoordinates[index]);
-    var marker = new google.maps.Marker({
-      position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
-      map: map
->>>>>>> a19bd53cd8e750af0d6b92a717402841cd640190
-    });
-    for (i=0; i<clientEnteredCities.length; i++){
-      console.log('client i '+ clientEnteredCities[i]);
-      var index = cityNamesArray.indexOf(clientEnteredCities[i]);
-      console.log(index);
-      if (index!==-1){
+      for (i=0; i<clientEnteredCities.length; i++){
+        console.log('client i '+ clientEnteredCities[i]);
+        var index = cityNamesArray.indexOf(clientEnteredCities[i]);
+        console.log(index);
         console.log(citiesCoordinates[index]);
+
         var marker = new google.maps.Marker({
           position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
           map: map
         });
-      } else {
-        alert('Please, go back to the form page and check your spelling')
+
+        for (i=0; i<clientEnteredCities.length; i++){
+          console.log('client i '+ clientEnteredCities[i]);
+          var index = cityNamesArray.indexOf(clientEnteredCities[i]);
+          console.log(index);
+          if (index!==-1){
+            console.log(citiesCoordinates[index]);
+            var marker = new google.maps.Marker({
+              position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
+              map: map
+            });
+          } else {
+            alert('Please, go back to the form page and check your spelling')
+          }
+        }
       }
     }
-  }
-<<<<<<< HEAD
-  //position: {lat: citiesCoordinates[cityMarker].lat, lng: citiesCoordinates[cityMarker].lng},
-=======
 }
->>>>>>> a19bd53cd8e750af0d6b92a717402841cd640190

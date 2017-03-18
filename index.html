@@ -12,11 +12,11 @@
 <body>
   <header>
     <div class ="logo-container">
-      <!-- <object id="animateLogo" type="image/svg+xml" data="assets/favrlogo.svg"></object> -->
-      <object id="animateLogo" type="image/svg+xml" data="assets/favrlogo3.svg"></object>
-      <div class ="logo-image">
-    </div>
-    <h2 class ="sub-title">Lend a Hand</h2>
+      <object id="animateLogo" type="image/svg+xml" data="assets/favrlogowithbg.svg"></object>
+      <!-- <div class ="logo-image">
+        <object id="bgAnimate" type="image/svg+xml" data="assets/bganimate.svg"></object>
+    </div> -->
+    <!-- <h2 class ="sub-title">Lend a Hand</h2> -->
 
   <div class="sub-header">
     <div class="social-media-box">
@@ -31,24 +31,28 @@
       <input id="password" type="password" name="password" placeholder="Password">
       <button id="loginSubmit" class="submit" type="submit">Submit</button>
     </div>
-    <p class="greeting" id = "greet">Hello, guest!</p>
+    <p class="greeting" id = "greet">Hello!</p>
   </div>
   <div class = "nav">
 
     <a class="home-button" href = "index.html">Home</a>
     <a class="about-button" href = "aboutus.html">About Us</a>
+    <a class="favorboard-button" href = "postboard.html">Favor board</a>
+
 
   </div>
 
 </header>
 <main>
+    <p class="seeker-intro">Are you in the mood to help someone out? <br><br> click this button to see if you can do someone a special favor.</p>
   <a class="seeker-box" href="postboard.html" >
 
     <img class="do-hand" src="assets/dohand.png">
     <p class="text-link">Do A Favor</p>
-
   </a>
+
   <div class="poster-box">
+
     <img class="ask-hand" src="assets/askhand.png">
     <section class="new-form">
 
@@ -81,7 +85,15 @@
 
     </section>
   </div>
+  <p class="poster-intro">Are you looking for someone to do you a favor? <br><br> Fill this form out and submit to see your favor fulfilled.</p>
+
 </main>
+
 <script src = "app.js"></script>
 </body>
+<!-- <div class="footer-container"> -->
+<footer class="home-footer">
+  <p>&copy; 2017 by Good codeFellas</p>
+</footer>
+<!-- </div> -->
 </html>

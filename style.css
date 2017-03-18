@@ -17,20 +17,24 @@ html {
 }
 
 .logo-image {
+  width: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
   max-width: 500px;
   max-height: 250px;
 }
 
-.sub-title {
+/*.sub-title {
   text-align: center;
   font-weight: lighter;
   font-stretch: extra-condensed;
   font-family: 'Lobster', cursive;
   color: #00A79D;
   margin: 0;
-}
+}*/
 
 .nav {
   width: 1500px;
@@ -102,6 +106,15 @@ legend {
    text-decoration: none;
    color: white;
  }
+ .favorboard-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+
  .home-button {
    background-color: #00A79D;
    text-align: center;
@@ -128,6 +141,34 @@ legend {
   width: 300px;
 }
 
+/*-------home body style--------*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col1 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seeker-intro, .poster-intro {
+  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  align-items: baseline;
+  width: 200px;
+  margin: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  color: #00A79D;
+
+}
 .do-hand {
   justify-content: center;
   flex-direction: column;
@@ -154,7 +195,7 @@ legend {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin: 30px;
   border-radius: 10px;
   border: 10px solid #8CC63E;
   padding: 10px;
@@ -176,8 +217,10 @@ fieldset {
 }
 /*-------------style for about us page-------------*/
 
-h1 {
+.about-us-title {
   font-family: 'Lobster', cursive;
+  color: #00A79D;
+  text-align: center;
 }
 
 /*.nav {
@@ -245,7 +288,21 @@ h1 {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+.footer-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
 
+.home-footer {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #8CC63E;
+  padding: 1px;
+  width: 100%;
+  color: white;
+}
  .about-us-footer{
   width: 300px;
   height: 500px;
@@ -257,8 +314,8 @@ h1 {
 /*****************Post-board page styles****************/
 table{
   border: solid 2px blue;
-  margin-left: 15%;
-  margin-bottom: 5%;
+  /*margin-left: 15%;
+  margin-bottom: 5%;*/
 }
 
 thead{
@@ -285,9 +342,9 @@ tr {
 }
 
 
-.jobsMap{
+/*.jobsMap{
   margin-left: 30%;
-}
+}*/
 
 .available {
 

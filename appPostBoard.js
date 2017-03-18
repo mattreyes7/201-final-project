@@ -133,7 +133,7 @@ function renderAsRow(client) {
 
     function notifyPoster(event) {
       if (event.checked) {
-        alert('Thank you! A message has been sent to the poster of the favor.');
+        alert('Thank you! A message has been sent to the poster.');
       } else {
         alert('Please make another selection.');
       }

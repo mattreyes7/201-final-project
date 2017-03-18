@@ -7,7 +7,7 @@ var jobNumber = 1;
 var trElement;
 var cityName;
 var cityMarker;
-
+var markerLabel;
 // assigning localstorage array to the new variable to use in rendering rows
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
 
@@ -26,9 +26,14 @@ var citiesCoordinates = [
   { name: 'issaquah', lat: 47.5301, lng: -122.0326 },
   { name: 'carnation', lat: 47.6479, lng: -121.914 },
   { name:  'kent', lat: 47.3809, lng: -122.2348 },
+  {name: 'tukwila', lat:47.4740 , lng:-122.2610},
+  {name: 'woodinville', lat:47.7543 , lng: -122.1635},
+  {name: 'lynnwood', lat:47.8209 , lng:-122.3151 },
+  {name: 'tacoma', lat:47.2529 , lng:-122.4443},
+  {name: 'puyallup', lat: 47.1854, lng:-122.2929 },
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
-'bothel', 'new castle', 'renton', 'issaquah', 'carnation', 'kent']
+'bothel', 'new castle', 'renton', 'issaquah', 'carnation', 'kent','tukwila', 'woodinville', 'lynwood', 'tacoma', 'puyallup']
 ;
 
 var clientEnteredCities = [];
@@ -154,7 +159,9 @@ function initMap() {
     console.log(index);
     console.log(citiesCoordinates[index]);
     if (index !== -1){
+      markerLabel = ''+(i+1);
     var marker = new google.maps.Marker({
+      label: markerLabel,
       position: { lat: citiesCoordinates[index].lat, lng: citiesCoordinates[index].lng },
       map: map,
     });

@@ -7,29 +7,32 @@ var jobNumber = 1;
 var trElement;
 var cityName;
 var cityMarker;
+
 // assigning localstorage array to the new variable to use in rendering rows
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
 
 //console.log(clientArray);
 
 var citiesCoordinates = [
-  {name:'seattle', lat:47.6062, lng:-122.3321},
-  {name:'redmond', lat:47.6740, lng:-122.1215},
-  {name:'bellevue', lat:47.6101, lng:-122.2015},
-  {name:'sammamish', lat:47.6163, lng:-122.0356},
-  {name:'kirkland', lat: 47.6769,  lng:-122.2060},
-  {name:'mercer island', lat: 7.5707, lng:-122.2221},
-  {name: 'bothel', lat: 7.7610, lng:-122.2056},
-  {name: 'new castle', lat: 47.5390, lng:-122.1557},
-  {name:'renton', lat: 47.4829, lng:-122.2171},
-  {name: 'issaquah', lat: 47.5301, lng: -122.0326},
-  {name: 'carnation', lat:47.6479, lng:-121.914},
-  {name: 'kent', lat:47.3809, lng:-122.2348}
+  { name: 'seattle', lat: 47.6062, lng: -122.3321 },
+  { name: 'redmond', lat: 47.6740, lng: -122.1215 },
+  { name: 'bellevue', lat: 47.6101, lng: -122.2015 },
+  { name: 'sammamish', lat: 47.6163, lng: -122.0356 },
+  { name: 'kirkland', lat: 47.6769,  lng: -122.2060 },
+  { name: 'mercer island', lat: 7.5707, lng: -122.2221 },
+  { name: 'bothel', lat: 7.7610, lng: -122.2056 },
+  { name: 'new castle', lat: 47.5390, lng: -122.1557 },
+  { name: 'renton', lat: 47.4829, lng: -122.2171 },
+  { name: 'issaquah', lat: 47.5301, lng: -122.0326 },
+  { name: 'carnation', lat: 47.6479, lng: -121.914 },
+  { name:  'kent', lat: 47.3809, lng: -122.2348 },
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
-'bothel', 'new castle', 'renton', 'issaquah', 'carnation', 'kent' ];
+'bothel', 'new castle', 'renton', 'issaquah', 'carnation', 'kent']
+;
 
 var clientEnteredCities = [];
+
 //console.log(clientArray);
 function renderHeader() {
   trElement = document.createElement('thead');
@@ -53,7 +56,7 @@ function renderHeader() {
 
   nameData = document.createElement('td');
 
-  nameData.textContent = "City";
+  nameData.textContent = 'City';
 
   trElement.appendChild(nameData);
 
@@ -75,13 +78,10 @@ function renderAsRow(client) {
 
     trElement = document.createElement('tr');
 
-
     trElement.setAttribute('class', 'available');
     nameData = document.createElement('td');
     nameData.textContent = jobNumber;
-
     trElement.appendChild(nameData);
-
 
     jobNumber++;
 
@@ -89,16 +89,13 @@ function renderAsRow(client) {
     nameData.textContent = client[i].name;
     trElement.appendChild(nameData);
 
-
     nameData = document.createElement('td');
     nameData.textContent = client[i].email;
     trElement.appendChild(nameData);
 
-
     nameData = document.createElement('td');
     nameData.textContent = client[i].descript;
     trElement.appendChild(nameData);
-
 
     nameData = document.createElement('td');
     nameData.textContent = client[i].loc;
@@ -111,16 +108,13 @@ function renderAsRow(client) {
     trElement.appendChild(nameData);
 
     var checkbox = document.createElement('INPUT');
-    checkbox.type = "checkbox";
-
+    checkbox.type = 'checkbox';
     trElement.appendChild(checkbox);
 
-
     // dimming checjbox on click
-    checkbox.addEventListener('click', function() {
+    checkbox.addEventListener('click', function () {
 
-
-      if (this.checked){
+      if (this.checked) {
 
         this.parentElement.setAttribute('class', 'unavailable');
       } else {
@@ -129,7 +123,7 @@ function renderAsRow(client) {
 
       notifyPoster(this);
       console.log(checkbox.checked);
-    })
+    });
 
     function notifyPoster(event) {
       if (event.checked) {
@@ -143,6 +137,7 @@ function renderAsRow(client) {
 
   }
 }
+
 console.log(clientEnteredCities);
 
 renderAsRow(clientArray);
@@ -150,17 +145,17 @@ renderAsRow(clientArray);
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
-    center: {lat:47.6062, lng:-122.3321}
+    center: { lat: 47.6062, lng: -122.3321 }
   });
 
-  for (i=0; i<clientEnteredCities.length; i++){
-    console.log('client i '+ clientEnteredCities[i]);
+  for (i = 0; i < clientEnteredCities.length; i++) {
+    console.log('client i ' + clientEnteredCities[i]);
     var index = cityNamesArray.indexOf(clientEnteredCities[i]);
     console.log(index);
     console.log(citiesCoordinates[index]);
     var marker = new google.maps.Marker({
-      position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
-      map: map
+      position: { lat: citiesCoordinates[index].lat, lng: citiesCoordinates[index].lng },
+      map: map,
     });
   }
 }

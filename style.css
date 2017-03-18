@@ -137,8 +137,46 @@ button {
 }
 
 legend {
-  font-family: 'Francois One', sans-serif;;
+  font-family: 'Francois One', sans-serif;
 }
+
+
+ a {
+   font-family: 'Francois One', sans-serif;
+   font-size: 20px;
+   text-decoration: none;
+   color: white;
+ }
+ .favorboard-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+
+ .home-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+ .about-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+
+ label input {
+   font-family: 'Francois One', sans-serif;
+   padding: 5px;
+ }
 
 a {
   font-family: 'Francois One', sans-serif;;
@@ -176,6 +214,7 @@ label input {
   font-family: 'Francois One', sans-serif;
   padding: 5px;
 }
+
 
 .new-form {
   width: 300px;
@@ -219,7 +258,7 @@ main {
   justify-content: center;
   text-align: center;
   color: #00A79D;
-  font-family: 'Francois One', sans-serif;;
+  font-family: 'Francois One', sans-serif;
   font-size: 30px;
 
 }
@@ -253,7 +292,7 @@ main {
 fieldset {
   border: 1px solid #8CC63E;
   color: #00A79D;
-  font-family: 'Francois One', sans-serif;;
+  font-family: 'Francois One', sans-serif;
 }
 /*-------------style for about us page-------------*/
 
@@ -270,11 +309,19 @@ font-family: 'Francois One', sans-serif;;
 }*/
 
 .bio-container {
+
+    font-family: 'Francois One', sans-serif;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
   font-family: 'Francois One', sans-serif;;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 
@@ -322,9 +369,9 @@ font-family: 'Francois One', sans-serif;;
   font-family: 'Roboto', sans-serif;
 }
 
-.person1-pic, .person3-pic, .person4-pic {
-  width: 200px;
-  height: 150px;
+.person1-pic,.person2-pic, .person3-pic, .person4-pic {
+  /*width: 200px;
+  height: 150px;*/
   justify-content: flex-start;
   flex-wrap: wrap;
 

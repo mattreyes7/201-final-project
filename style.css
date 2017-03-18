@@ -484,7 +484,12 @@ tr {
   padding: 5px;
 
 }
-
+h1 {
+  text-align:center;
+  color:white;
+  font-family: cursive;
+  background-color: #8CC63E;
+}
 
 /*.jobsMap{
 margin-left: 30%;

@@ -1,9 +1,55 @@
 
-/*reminder: use Roboto, Francois One, Lobster*/
-/*green hexid:#74C6A3, grey hexid:#5D5D5D, teal: #00A79D*/
+/*reminder: use Roboto, 'Francois One', 'Lobster', cursive*/
+/*green hexid:#8CC63E, grey hexid:#5D5D5D, teal: #00A79D*/
 
 /*---------style for home page----------------------*/
-.logo-info {
+
+html {
+  background-image: linear-gradient(white 45%, #00FFFF);
+
+}
+.pre-main {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: center;
+}
+.caption2 {
+  /*height: 100%;
+  width: 100%;*/
+  align-self: center;
+  opacity: 0;
+  text-align: center;
+  backface-visibility: hidden;
+  transition: transform 0.3s, opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: #8CC63E;
+  color: white;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.caption1 {
+  font-size: 20px;
+  align-self: center;
+  justify-content: center;
+}
+
+.caption1:hover .caption2 {
+  font-size: 20px;
+  /*max-width: 100%;*/
+  /*display: block;*/
+  position: relative;
+  opacity: 1;
+  transform: translate(15px, 15px);
+}
+
+/*--------------header styles-----------------------*/
+.logo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,71 +57,197 @@
 }
 
 .logo-image {
+  width: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
   max-width: 500px;
   max-height: 250px;
 }
 
-.sub-title {
-  font-weight: lighter;
-  font-stretch: extra-condensed;
-  font-family: Lobster;
-  color: #00A79D;
-  margin: 0;
-}
+/*.sub-title {
+text-align: center;
+font-weight: lighter;
+font-stretch: extra-condensed;
+font-family: 'Lobster', cursive;
+color: #00A79D;
+margin: 0;
+}*/
 
 .nav {
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #8CC63E;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
   justify-content: center;
   align-items: center;
 }
 .sub-header {
+  width: 1500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #74C6A3;
+  background-color: #8CC63E;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 5px;
+}
+
+.greeting {
+  font-size: 60px;
+  text-align: center;
+  font-weight: lighter;
+  font-stretch: extra-condensed;
+  font-family: 'Lobster', cursive;
+  color: white;
+  margin: 0;
 }
 .social-media {
   justify-content: space-around;
 }
 .login {
-  color: #5D5D5D;
-  font-family: Lobster;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: #00A79D;
+  font-family: 'Lobster', cursive;
   justify-content: center;
   align-items: center;
 }
-#submit {
+#submit, .submit {
   color: #00A79D;
 }
+/*----------------header style end---------------*/
 
-label input {
-  font-family: Francois One;
-  padding: 5px;
-}
+/*------------------form style and nav style----------------*/
+
 
 
 button {
-  font-family: Francois One
+  font-family: 'Francois One', sans-serif;
   /*color: #00A79D;*/
 }
 
 legend {
-  font-family: Francois One;
+  font-family: 'Francois One', sans-serif;
 }
 
+
  a {
+   font-family: 'Francois One', sans-serif;
+   font-size: 20px;
    text-decoration: none;
-   color: #00A79D;
+   color: white;
  }
+ .favorboard-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+
+ .home-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+ .about-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+
+ label input {
+   font-family: 'Francois One', sans-serif;
+   padding: 5px;
+ }
+
+a {
+  font-family: 'Francois One', sans-serif;;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.favorboard-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.home-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.about-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+label input {
+  font-family: 'Francois One', sans-serif;
+  padding: 5px;
+}
+
 
 .new-form {
   width: 300px;
 }
 
+/*-------home body style--------*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col1 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seeker-intro, .poster-intro {
+  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  align-items: baseline;
+  width: 200px;
+  margin: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  color: #00A79D;
+  border-radius: 10px;
+}
 .do-hand {
   justify-content: center;
   flex-direction: column;
@@ -84,26 +256,32 @@ legend {
 .text-link {
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
+  color: #00A79D;
+  font-family: 'Francois One', sans-serif;
+  font-size: 30px;
+
 }
 .ask-hand {
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+
 .seeker-box, .poster-box {
+  background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin: 30px;
   border-radius: 10px;
-  border: 10px solid #74C6A3;
+  border: 10px solid #8CC63E;
   padding: 10px;
 }
 
 main {
+  margin-top: 30px;
   justify-content: center;
   align-content: center;
   display: flex;
@@ -112,133 +290,247 @@ main {
 }
 
 fieldset {
-  border: 1px solid #74C6A3;
+  border: 1px solid #8CC63E;
   color: #00A79D;
-  font-family: Francois One;
+  font-family: 'Francois One', sans-serif;
 }
 /*-------------style for about us page-------------*/
 
-h1 {
-  font-family: Lobster;
+.about-us-title {
+  font-family: 'Lobster', cursive;
+  color: #00A79D;
+  text-align: center;
 }
 
-.nav {
-  text-align: center;
-  font-family: Francois One;
-}
+/*.nav {
+align-content: space-around;
+text-align: center;
+font-family: 'Francois One', sans-serif;;
+}*/
+
 .bio-container {
-    font-family: Francois One;
+
+    font-family: 'Francois One', sans-serif;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}
 
-
- .person1 {
-    width: 300px;
-    height: 500px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-right: 2px;
-    margin-left: 2px;
+  font-family: 'Francois One', sans-serif;;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 
- .person2 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+
+.person1 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person3 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person2 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person4 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person3 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
+
+}
+
+.person4 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
 .person1-bio, .person2-bio, .person3-bio, .person4-bio {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
 }
 
-.person1-pic, .person2-pic, .person3-pic, .person4-pic {
-  width: 300px;
-  height: 250px;
+.person1-pic,.person2-pic, .person3-pic, .person4-pic {
+  /*width: 200px;
+  height: 150px;*/
   justify-content: flex-start;
   flex-wrap: wrap;
+
+}
+.footer-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
- .about-us-footer{
+
+#person1-pic {
+  background-image: url('assets/adonay.png');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+}
+
+#person1-pic:hover {
+  background-image: url('https://media3.giphy.com/media/6onMzNPjtFeCI/200.webp#38');
+}
+
+#person2-pic {
+  background-image: url('assets/sidney.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+}
+
+#person2-pic:hover {
+  background-image: url('https://media.giphy.com/media/xT9KVluGDHZvOk0tdC/giphy.gif');
+}
+
+#person3-pic {
+  background-image: url('assets/iryna.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+}
+
+#person3-pic:hover {
+  background-image: url('https://media1.giphy.com/media/7rQSSmxalNtfy/200w.webp#1');
+}
+
+#person4-pic {
+  background-image: url('assets/matt.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+}
+
+#person4-pic:hover {
+  background-image: url('http://37.media.tumblr.com/tumblr_lp5h8ugPBs1qhad67o1_500.gif');
+  background-size: cover;
+}
+
+.home-footer {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #8CC63E;
+  padding: 1px;
+  width: 100%;
+  color: white;
+}
+.about-us-footer{
   width: 300px;
-  height: 500px;
   flex-wrap: wrap;
   text-align: center;
-
 }
 
-/*****************Post-board table styles****************/
+/*****************Post-board page styles****************/
+h1 {
+  color: #00A79D;
+  font-family: 'Lobster';
+  font-size: 60px;
+}
+
 table{
-  border: solid 2px blue;
-  margin-left: 15%;
+  border: solid 2px #8CC63E;
+  justify-content: center;
+  padding: 5px;
+  color: white;
+  /*margin-left: 15%;
+  margin-bottom: 5%;*/
 }
 
 thead{
   font-weight: bold;
+  padding: 5px;
+
 }
 
 thead td{
-    width: 15%;
-    background-color: grey;
+  width: 15%;
+  background-color: #00A79D;
+  padding: 5px;
 }
 
 
 tr {
-    background-color: lightgrey;
+  background-color: #8CC63E;
+  padding: 5px;
+
 }
 
 td {
-  background-color: lightgrey;
+  background-color: #8CC63E;
   font-size: 1.2em;
+  padding: 5px;
+
 }
 
 tr {
-  background-color: grey;
+  background-color: #00A79D;
+  padding: 5px;
+
+}
+h1 {
+  text-align:center;
+  color:white;
+  font-family: cursive;
+  background-color: #8CC63E;
 }
 
+/*.jobsMap{
+margin-left: 30%;
+}*/
+
 .available {
-<<<<<<< HEAD
+
   color: black;
 }
 
 .unavailable {
   color: grey;
 }
-=======
-  color: red;
+
+.favor-title {
+  text-align: center;
 }
-
-.unavailable {
-  color: yellow;
+.favorboard-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*align-content: center;*/
 }
-
->>>>>>> f4a2301e432183d8a0c47c768d6828c720e899c4
-
+.map-container {
+  align-items: center;
+  align-content: center;
+  margin-top: 50px;
+}
+.map {
+  height: 300px;
+  width: 700px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: solid #8CC63E;
+  border-radius: 10px;
+}
 /*************End of post-board styles****************/

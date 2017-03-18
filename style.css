@@ -354,6 +354,7 @@ fieldset {
 /*****************Post-board page styles****************/
 table{
   border: solid 2px blue;
+  justify-content: center;
   /*margin-left: 15%;
   margin-bottom: 5%;*/
 }
@@ -398,5 +399,6 @@ tr {
 .map {
         height: 400px;
         width: 60%;
+        justify-content: center;
        }
 /*************End of post-board styles****************/

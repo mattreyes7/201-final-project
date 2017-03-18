@@ -8,6 +8,46 @@ html {
   background-image: linear-gradient(white 45%, #00FFFF);
 
 }
+.pre-main {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: center;
+}
+.caption2 {
+  /*height: 100%;
+  width: 100%;*/
+  align-self: center;
+  opacity: 0;
+  text-align: center;
+  backface-visibility: hidden;
+  transition: transform 0.3s, opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: #8CC63E;
+  color: white;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.caption1 {
+  font-size: 20px;
+  align-self: center;
+  justify-content: center;
+}
+
+.caption1:hover .caption2 {
+  font-size: 20px;
+  /*max-width: 100%;*/
+  /*display: block;*/
+  position: relative;
+  opacity: 1;
+  transform: translate(15px, 15px);
+}
+
 /*--------------header styles-----------------------*/
 .logo-container {
   display: flex;
@@ -17,20 +57,24 @@ html {
 }
 
 .logo-image {
+  width: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
   max-width: 500px;
   max-height: 250px;
 }
 
-.sub-title {
+/*.sub-title {
   text-align: center;
   font-weight: lighter;
   font-stretch: extra-condensed;
   font-family: 'Lobster', cursive;
   color: #00A79D;
   margin: 0;
-}
+}*/
 
 .nav {
   width: 1500px;
@@ -102,6 +146,15 @@ legend {
    text-decoration: none;
    color: white;
  }
+ .favorboard-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+
  .home-button {
    background-color: #00A79D;
    text-align: center;
@@ -128,6 +181,34 @@ legend {
   width: 300px;
 }
 
+/*-------home body style--------*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col1 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seeker-intro, .poster-intro {
+  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  align-items: baseline;
+  width: 200px;
+  margin: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  color: #00A79D;
+  border-radius: 10px;
+}
 .do-hand {
   justify-content: center;
   flex-direction: column;
@@ -154,7 +235,7 @@ legend {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin: 30px;
   border-radius: 10px;
   border: 10px solid #8CC63E;
   padding: 10px;
@@ -176,8 +257,10 @@ fieldset {
 }
 /*-------------style for about us page-------------*/
 
-h1 {
+.about-us-title {
   font-family: 'Lobster', cursive;
+  color: #00A79D;
+  text-align: center;
 }
 
 /*.nav {
@@ -239,26 +322,86 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-.person1-pic, .person2-pic, .person3-pic, .person4-pic {
-  width: 300px;
-  height: 250px;
+.person1-pic, .person3-pic, .person4-pic {
+  width: 200px;
+  height: 150px;
   justify-content: flex-start;
   flex-wrap: wrap;
+
+}
+.footer-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
+
+#person1-pic {
+  background-image: url('https://a6m4rf6fdx-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/CodeFellows.png');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+  }
+
+  #person1-pic:hover {
+    background-image: url('https://media3.giphy.com/media/6onMzNPjtFeCI/200.webp#38');
+  }
+
+#person2-pic {
+  background-image: url('assets/sidney.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+}
+
+#person2-pic:hover {
+  background-image: url('https://media.giphy.com/media/xT9KVluGDHZvOk0tdC/giphy.gif');
+}
+
+#person3-pic {
+  background-image: url('assets/iryna.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+  }
+
+  #person3-pic:hover {
+    background-image: url('https://media1.giphy.com/media/7rQSSmxalNtfy/200w.webp#1');
+  }
+
+  #person4-pic {
+    background-image: url('assets/matt.jpg');
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+    }
+
+    #person4-pic:hover {
+      background-image: url('https://media.giphy.com/media/13NpBBe23hWspy/giphy.gif');
+    }
+
+.home-footer {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #8CC63E;
+  padding: 1px;
+  width: 100%;
+  color: white;
+}
  .about-us-footer{
   width: 300px;
   height: 500px;
   flex-wrap: wrap;
   text-align: center;
-
 }
 
 /*****************Post-board page styles****************/
 table{
   border: solid 2px blue;
-  margin-left: 15%;
-  margin-bottom: 5%;
+  justify-content: center;
+  /*margin-left: 15%;
+  margin-bottom: 5%;*/
 }
 
 thead{
@@ -285,9 +428,9 @@ tr {
 }
 
 
-.jobsMap{
+/*.jobsMap{
   margin-left: 30%;
-}
+}*/
 
 .available {
 
@@ -301,5 +444,6 @@ tr {
 .map {
         height: 400px;
         width: 60%;
+        justify-content: center;
        }
 /*************End of post-board styles****************/

@@ -378,7 +378,8 @@ font-family: 'Francois One', sans-serif;;
 }
 
 #person4-pic:hover {
-  background-image: url('https://media.giphy.com/media/13NpBBe23hWspy/giphy.gif');
+  background-image: url('http://37.media.tumblr.com/tumblr_lp5h8ugPBs1qhad67o1_500.gif');
+  background-size: cover;
 }
 
 .home-footer {

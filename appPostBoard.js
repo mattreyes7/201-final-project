@@ -185,12 +185,12 @@ function renderHeader(){
             console.log(citiesCoordinates[index]);
             var marker = new google.maps.Marker({
               position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
+              label: citiesCoordinates.indexOf()+1,
               map: map
             });
           } else {
             alert('Please, go back to the form page and check your spelling')
-          }
         }
       }
     }
-}
+   }

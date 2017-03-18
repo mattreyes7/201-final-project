@@ -4,8 +4,8 @@
 
 /*---------style for home page----------------------*/
 @font-face {
-    font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
-    src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
+  font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
+  src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
 }
 /*--------------header styles-----------------------*/
 .logo-container {
@@ -83,28 +83,28 @@ legend {
   font-family: FrancoisOne-Regular;
 }
 
- a {
-   font-family: FrancoisOne-Regular;
-   font-size: 20px;
-   text-decoration: none;
-   color: white;
- }
- .home-button {
-   background-color: #00A79D;
-   text-align: center;
-   font-family: FrancoisOne-Regular;
-   padding: 10px;
-   margin: 10px;
-   border-radius: 10px;
- }
- .about-button {
-   background-color: #00A79D;
-   text-align: center;
-   font-family: FrancoisOne-Regular;
-   padding: 10px;
-   margin: 10px;
-   border-radius: 10px;
- }
+a {
+  font-family: FrancoisOne-Regular;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.home-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: FrancoisOne-Regular;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.about-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: FrancoisOne-Regular;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
 
 .new-form {
   width: 300px;
@@ -162,57 +162,57 @@ h1 {
 }
 
 /*.nav {
-  align-content: space-around;
-  text-align: center;
-  font-family: FrancoisOne-Regular;
+align-content: space-around;
+text-align: center;
+font-family: FrancoisOne-Regular;
 }*/
 
 .bio-container {
-    font-family: FrancoisOne-Regular;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  font-family: FrancoisOne-Regular;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
- .person1 {
-    width: 300px;
-    height: 500px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-right: 2px;
-    margin-left: 2px;
+.person1 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person2 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person2 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person3 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person3 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person4 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person4 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
@@ -227,7 +227,7 @@ h1 {
   flex-wrap: wrap;
 }
 
- .about-us-footer{
+.about-us-footer{
   width: 300px;
   height: 500px;
   flex-wrap: wrap;
@@ -236,22 +236,35 @@ h1 {
 }
 
 /*****************Post-board page styles****************/
-.posBoard-h1{
+h1{
   margin-left: 40%;
+  color:white;
   font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
   src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
 }
 
 }
-.postboard-container{
-  float:left;
-  width:60%;
+.table-map{
+  display: flex;
 }
-  .map{
-    float: left;
-    width:35%;
+.postboard-container{
+  display: flex;
+  justify-content: flex-start;
+  width:50%;
+}
+h3 {
+  margin-left: 40%;
+  color:white;
+  font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
+  src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
 
-  }
+}
+.map{
+  display: flex;
+  tent: flex-end;
+  width:30%;
+
+}
 table{
   border: solid 2px blue;
   margin-left: 15%;
@@ -263,13 +276,13 @@ thead{
 }
 
 thead td{
-    width: 15%;
-    background-color: grey;
+  width: 15%;
+  background-color: grey;
 }
 
 
 tr {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 td {
@@ -302,7 +315,7 @@ body{background-color:#8CC63E }
 }
 
 .map {
-        height: 400px;
-        width: 60%;
-       }
+  height: 400px;
+  width: 60%;
+}
 /*************End of post-board styles****************/

@@ -1,5 +1,7 @@
 'use strict'
-new Vivus('animateLogo', {duration: 500});
+new Vivus('animateLogo', {type: 'delayed', duration: 400});
+// new Vivus('bgAnimate', {type: 'sync', duration: 500});
+
 var clientArray = [];
 
 var table = document.getElementById('postBoard');
@@ -21,7 +23,7 @@ function userLs(event){
   event.preventDefault();
   var userName = document.getElementById('userName').value;
   var password = document.getElementById('password').value;
-  document.getElementById('greet').textContent = 'Hello, ' +  userName + '!';
+  document.getElementById('greet').textContent = 'Hello' +', ' +userName + '!';
   users.push([userName, password]);
   localStorage.setItem('lsUsers', JSON.stringify(users));
 }
@@ -34,7 +36,7 @@ function handleForm(event){
   var loc = event.target.loc.value;
   var time = event.target.time.value;
   var newClient = new Client(name, email, descript, loc, time);
-  //restoring old entries to the aray of clients
+  //restoring old entries to the array of clients
   if (localStorage.lsClientArray) {
     var oldClients = JSON.parse(localStorage.getItem('lsClientArray'));
     //console.log('oldClients:' +oldClients)

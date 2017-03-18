@@ -68,12 +68,12 @@ html {
 }
 
 /*.sub-title {
-  text-align: center;
-  font-weight: lighter;
-  font-stretch: extra-condensed;
-  font-family: 'Lobster', cursive;
-  color: #00A79D;
-  margin: 0;
+text-align: center;
+font-weight: lighter;
+font-stretch: extra-condensed;
+font-family: 'Lobster', cursive;
+color: #00A79D;
+margin: 0;
 }*/
 
 .nav {
@@ -140,42 +140,42 @@ legend {
   font-family: 'Francois One', sans-serif;;
 }
 
- a {
-   font-family: 'Francois One', sans-serif;;
-   font-size: 20px;
-   text-decoration: none;
-   color: white;
- }
- .favorboard-button {
-   background-color: #00A79D;
-   text-align: center;
-   font-family: 'Francois One', sans-serif;;
-   padding: 10px;
-   margin: 10px;
-   border-radius: 10px;
- }
+a {
+  font-family: 'Francois One', sans-serif;;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.favorboard-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
 
- .home-button {
-   background-color: #00A79D;
-   text-align: center;
-   font-family: 'Francois One', sans-serif;;
-   padding: 10px;
-   margin: 10px;
-   border-radius: 10px;
- }
- .about-button {
-   background-color: #00A79D;
-   text-align: center;
-   font-family: 'Francois One', sans-serif;;
-   padding: 10px;
-   margin: 10px;
-   border-radius: 10px;
- }
+.home-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.about-button {
+  background-color: #00A79D;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
 
- label input {
-   font-family: 'Francois One', sans-serif;
-   padding: 5px;
- }
+label input {
+  font-family: 'Francois One', sans-serif;
+  padding: 5px;
+}
 
 .new-form {
   width: 300px;
@@ -264,57 +264,57 @@ fieldset {
 }
 
 /*.nav {
-  align-content: space-around;
-  text-align: center;
-  font-family: 'Francois One', sans-serif;;
+align-content: space-around;
+text-align: center;
+font-family: 'Francois One', sans-serif;;
 }*/
 
 .bio-container {
-    font-family: 'Francois One', sans-serif;;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  font-family: 'Francois One', sans-serif;;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
- .person1 {
-    width: 300px;
-    height: 500px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-right: 2px;
-    margin-left: 2px;
+.person1 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person2 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person2 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person3 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person3 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
- .person4 {
-   width: 300px;
-   height: 500px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
-   margin-right: 2px;
-   margin-left: 2px;
+.person4 {
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2px;
+  margin-left: 2px;
 
 }
 
@@ -342,11 +342,11 @@ fieldset {
   background-size: cover;
   width: 200px;
   height: 150px;
-  }
+}
 
-  #person1-pic:hover {
-    background-image: url('https://media3.giphy.com/media/6onMzNPjtFeCI/200.webp#38');
-  }
+#person1-pic:hover {
+  background-image: url('https://media3.giphy.com/media/6onMzNPjtFeCI/200.webp#38');
+}
 
 #person2-pic {
   background-image: url('assets/sidney.jpg');
@@ -364,22 +364,22 @@ fieldset {
   background-size: cover;
   width: 200px;
   height: 150px;
-  }
+}
 
-  #person3-pic:hover {
-    background-image: url('https://media1.giphy.com/media/7rQSSmxalNtfy/200w.webp#1');
-  }
+#person3-pic:hover {
+  background-image: url('https://media1.giphy.com/media/7rQSSmxalNtfy/200w.webp#1');
+}
 
-  #person4-pic {
-    background-image: url('assets/matt.jpg');
-    background-size: cover;
-    width: 200px;
-    height: 150px;
-    }
+#person4-pic {
+  background-image: url('assets/matt.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+}
 
-    #person4-pic:hover {
-      background-image: url('https://media.giphy.com/media/13NpBBe23hWspy/giphy.gif');
-    }
+#person4-pic:hover {
+  background-image: url('https://media.giphy.com/media/13NpBBe23hWspy/giphy.gif');
+}
 
 .home-footer {
   text-align: center;
@@ -389,7 +389,7 @@ fieldset {
   width: 100%;
   color: white;
 }
- .about-us-footer{
+.about-us-footer{
   width: 300px;
   height: 500px;
   flex-wrap: wrap;
@@ -398,38 +398,49 @@ fieldset {
 
 /*****************Post-board page styles****************/
 table{
-  border: solid 2px blue;
+  border: solid 2px #8CC63E;
   justify-content: center;
+  padding: 5px;
+  color: white;
   /*margin-left: 15%;
   margin-bottom: 5%;*/
 }
 
 thead{
   font-weight: bold;
+  padding: 5px;
+
 }
 
 thead td{
-    width: 15%;
-    background-color: grey;
+  width: 15%;
+  background-color: #00A79D;
+  padding: 5px;
 }
 
 
 tr {
-    background-color: lightgrey;
+  background-color: #8CC63E;
+  padding: 5px;
+
 }
 
 td {
-  background-color: lightgrey;
+  background-color: #8CC63E;
   font-size: 1.2em;
+  padding: 5px;
+
 }
 
 tr {
-  background-color: grey;
+  background-color: #00A79D;
+  padding: 5px;
+
 }
 
 
 /*.jobsMap{
-  margin-left: 30%;
+margin-left: 30%;
 }*/
 
 .available {
@@ -441,9 +452,27 @@ tr {
   color: grey;
 }
 
+.favor-title {
+  text-align: center;
+}
+.favorboard-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*align-content: center;*/
+}
+.map-container {
+  align-items: center;
+  align-content: center;
+  margin-top: 50px;
+}
 .map {
-        height: 400px;
-        width: 60%;
-        justify-content: center;
-       }
+  height: 300px;
+  width: 700px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: solid #8CC63E;
+  border-radius: 10px;
+}
 /*************End of post-board styles****************/

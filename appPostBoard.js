@@ -153,9 +153,11 @@ function initMap() {
     var index = cityNamesArray.indexOf(clientEnteredCities[i]);
     console.log(index);
     console.log(citiesCoordinates[index]);
+    if (index !== -1){
     var marker = new google.maps.Marker({
       position: { lat: citiesCoordinates[index].lat, lng: citiesCoordinates[index].lng },
       map: map,
     });
-  }
+  } else {alert('Please go back to homepage and check the spelling in Favor Location')}
+}
 }

@@ -6,8 +6,8 @@ var nameData;
 var jobNumber = 1;
 var trElement;
 var cityName;
-var cityMarker;
-// assigning localstorage array to the new variable to use in rendering rows
+
+
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
 
 //console.log(clientArray);
@@ -180,7 +180,7 @@ function renderHeader(){
         for (i=0; i<clientEnteredCities.length; i++){
           console.log('client i '+ clientEnteredCities[i]);
           var index = cityNamesArray.indexOf(clientEnteredCities[i]);
-          console.log(index);
+          //console.log(index);
           if (index!==-1){
             console.log(citiesCoordinates[index]);
             var marker = new google.maps.Marker({
@@ -189,8 +189,13 @@ function renderHeader(){
               map: map
             });
           } else {
-            alert('Please, go back to the form page and check your spelling')
-        }
+            alert('Please, go back to the form page and check your spelling');
+            var marker = new google.maps.Marker({
+              position: {lat:80, lng:120},
+              label: (citiesCoordinates.indexOf()+1),
+              map: map
+        });
       }
     }
   }
+}

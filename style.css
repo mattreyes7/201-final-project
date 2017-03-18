@@ -236,6 +236,9 @@ font-family: FrancoisOne-Regular;
 }
 
 /*****************Post-board page styles****************/
+.postBoard{
+  height:100%;
+}
 h1{
   margin-left: 40%;
   color:white;
@@ -295,6 +298,7 @@ tr {
 }
 
 .navBoard{
+  margin-top: 0;
   background-color:#00A79D;
   height: 10%;
 }
@@ -311,7 +315,7 @@ tr {
   width: 25%;
 }
 body{background-color:#8CC63E }
-
+ height:100:
 .jobsMap{
   margin-left: 30%;
 }

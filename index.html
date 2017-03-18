@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Favor</title>
+  <link href="https://fonts.googleapis.com/css?family=Francois+One|Lobster|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.0/vivus.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class ="logo-container">
+      <object id="animateLogo" type="image/svg+xml" data="assets/favrlogowithbg.svg"></object>
+      <!-- <div class ="logo-image">
+        <object id="bgAnimate" type="image/svg+xml" data="assets/bganimate.svg"></object>
+    </div> -->
+    <!-- <h2 class ="sub-title">Lend a Hand</h2> -->
+
+  <div class="sub-header">
+    <div class="social-media-box">
+      <a href="https://www.facebook.com"><img src="assets/fb.png"></a>
+      <a href="https://www.instagram.com"><img src="assets/insta.png"></a>
+      <a href="https://twitter.com"><img src="assets/twit.png"></a>
+    </div>
+
+    <div class="login">
+      <label for="name">Login:</label>
+      <input id="userName" type="text" name="name" placeholder="Username">
+      <input id="password" type="password" name="password" placeholder="Password">
+      <button id="loginSubmit" class="submit" type="submit">Submit</button>
+    </div>
+    <p class="greeting" id = "greet">Hello!</p>
+  </div>
+  <div class = "nav">
+
+    <a class="home-button" href = "index.html">Home</a>
+    <a class="about-button" href = "aboutus.html">About Us</a>
+    <a class="favorboard-button" href = "postboard.html">Favor board</a>
+
+
+  </div>
+
+</header>
+<div class="pre-main">
+<div class="seeker-intro">
+  <figure class="caption1">Are you in the mood to help someone out?
+    <figcaption class="caption2">
+       click the hand below and see if you can do someone a special favor.
+     </figcaption>
+  </figure>
+</div>
+<div class="poster-intro">
+  <figure class="caption1">Are you looking for someone to do you a favor?
+    <figcaption class="caption2">
+        Fill this form out and submit to see your favor fulfilled.
+     </figcaption>
+  </figure>
+</div>
+</div>
+<main>
+  <a class="seeker-box" href="postboard.html" >
+
+    <img class="do-hand" src="assets/dohand.png">
+    <p class="text-link">Do A Favor</p>
+  </a>
+
+  <div class="poster-box">
+
+    <img class="ask-hand" src="assets/askhand.png">
+    <section class="new-form">
+
+      <form id="addForm">
+        <fieldset>
+          <legend>Ask For A Favor</legend>
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Name">
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input id="email" type="text" name="email" placeholder="Email">
+          </div>
+          <div>
+            <label for="descript">Favor Description:</label>
+            <input id="descript" type="text" name="descript" placeholder="Job Description">
+          </div>
+          <div>
+            <label for="loc">Favor Location:</label>
+            <input id="loc" type="text" name="loc" placeholder="Job Location">
+          </div>
+          <div>
+            <label for="timeFrame">Time frame:</label>
+            <input id="time" type="text" name="time" placeholder="timeFrame">
+          </div>
+          <button id="submit" type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+    </section>
+  </div>
+
+</main>
+
+<script src = "app.js"></script>
+</body>
+<!-- <div class="footer-container"> -->
+<footer class="home-footer">
+  <p>&copy; 2017 by Good codeFellas</p>
+</footer>
+<!-- </div> -->
+</html>

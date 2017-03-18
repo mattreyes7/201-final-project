@@ -322,11 +322,12 @@ fieldset {
   font-family: 'Roboto', sans-serif;
 }
 
-.person1-pic, .person2-pic, .person3-pic, .person4-pic {
-  width: 300px;
-  height: 250px;
+.person1-pic, .person3-pic, .person4-pic {
+  width: 200px;
+  height: 150px;
   justify-content: flex-start;
   flex-wrap: wrap;
+
 }
 .footer-container {
   display: flex;
@@ -334,6 +335,51 @@ fieldset {
   align-items: center;
   align-content: center;
 }
+
+
+#person1-pic {
+  background-image: url('https://a6m4rf6fdx-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/CodeFellows.png');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+  }
+
+  #person1-pic:hover {
+    background-image: url('https://media3.giphy.com/media/6onMzNPjtFeCI/200.webp#38');
+  }
+
+#person2-pic {
+  background-image: url('assets/sidney.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+}
+
+#person2-pic:hover {
+  background-image: url('https://media.giphy.com/media/xT9KVluGDHZvOk0tdC/giphy.gif');
+}
+
+#person3-pic {
+  background-image: url('assets/iryna.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+  }
+
+  #person3-pic:hover {
+    background-image: url('https://media1.giphy.com/media/7rQSSmxalNtfy/200w.webp#1');
+  }
+
+  #person4-pic {
+    background-image: url('assets/matt.jpg');
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+    }
+
+    #person4-pic:hover {
+      background-image: url('https://media.giphy.com/media/13NpBBe23hWspy/giphy.gif');
+    }
 
 .home-footer {
   text-align: center;
@@ -348,7 +394,6 @@ fieldset {
   height: 500px;
   flex-wrap: wrap;
   text-align: center;
-
 }
 
 /*****************Post-board page styles****************/

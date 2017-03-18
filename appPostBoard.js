@@ -132,9 +132,9 @@ function renderAsRow(client) {
 
     function notifyPoster(event) {
       if (event.checked) {
-        alert('Thank you! A message has been sent to the poster.');
+        alert('Thank you! A message has been sent to the poster. Have a nice day!');
       } else {
-        alert('Please make another selection.');
+        alert('The message has been recalled. Please make another selection or exit.  Have a nice day!');
       }
     }
 

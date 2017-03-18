@@ -1,5 +1,5 @@
 'use strict'
-// new Vivus('animateLogo', {duration: 200});
+new Vivus('animateLogo', {duration: 500});
 var clientArray = [];
 
 var table = document.getElementById('postBoard');

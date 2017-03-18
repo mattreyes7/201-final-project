@@ -1,11 +1,18 @@
 
-/*reminder: use Roboto, FrancoisOne-Regular, Lobster*/
+/*reminder: use Roboto, 'Francois One', 'Lobster', cursive*/
 /*green hexid:#8CC63E, grey hexid:#5D5D5D, teal: #00A79D*/
 
 /*---------style for home page----------------------*/
+<<<<<<< HEAD
 @font-face {
   font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
   src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
+=======
+
+html {
+  background-image: linear-gradient(white 45%, #00FFFF);
+
+>>>>>>> 5c34784ca0c3068377507d327c142e0c95be558a
 }
 /*--------------header styles-----------------------*/
 .logo-container {
@@ -26,16 +33,26 @@
   text-align: center;
   font-weight: lighter;
   font-stretch: extra-condensed;
-  font-family: Lobster;
+  font-family: 'Lobster', cursive;
   color: #00A79D;
   margin: 0;
 }
 
 .nav {
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #8CC63E;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
   justify-content: center;
   align-items: center;
 }
 .sub-header {
+  width: 1500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +68,7 @@
   text-align: center;
   font-weight: lighter;
   font-stretch: extra-condensed;
-  font-family: Lobster;
+  font-family: 'Lobster', cursive;
   color: white;
   margin: 0;
 }
@@ -59,30 +76,33 @@
   justify-content: space-around;
 }
 .login {
-  color: #5D5D5D;
-  font-family: Lobster;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: #00A79D;
+  font-family: 'Lobster', cursive;
   justify-content: center;
   align-items: center;
 }
-#submit {
+#submit, .submit {
   color: #00A79D;
 }
+/*----------------header style end---------------*/
 
-label input {
-  font-family: FrancoisOne-Regular;
-  padding: 5px;
-}
+/*------------------form style and nav style----------------*/
+
 
 
 button {
-  font-family: FrancoisOne-Regular
+  font-family: 'Francois One', sans-serif;
   /*color: #00A79D;*/
 }
 
 legend {
-  font-family: FrancoisOne-Regular;
+  font-family: 'Francois One', sans-serif;;
 }
 
+<<<<<<< HEAD
 a {
   font-family: FrancoisOne-Regular;
   font-size: 20px;
@@ -105,6 +125,35 @@ a {
   margin: 10px;
   border-radius: 10px;
 }
+=======
+ a {
+   font-family: 'Francois One', sans-serif;;
+   font-size: 20px;
+   text-decoration: none;
+   color: white;
+ }
+ .home-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+ .about-button {
+   background-color: #00A79D;
+   text-align: center;
+   font-family: 'Francois One', sans-serif;;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
+ }
+>>>>>>> 5c34784ca0c3068377507d327c142e0c95be558a
+
+ label input {
+   font-family: 'Francois One', sans-serif;
+   padding: 5px;
+ }
 
 .new-form {
   width: 300px;
@@ -120,7 +169,7 @@ a {
   justify-content: center;
   text-align: center;
   color: #00A79D;
-  font-family: FrancoisOne-Regular;
+  font-family: 'Francois One', sans-serif;;
   font-size: 30px;
 
 }
@@ -131,6 +180,7 @@ a {
 }
 
 .seeker-box, .poster-box {
+  background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -153,15 +203,16 @@ main {
 fieldset {
   border: 1px solid #8CC63E;
   color: #00A79D;
-  font-family: FrancoisOne-Regular;
+  font-family: 'Francois One', sans-serif;;
 }
 /*-------------style for about us page-------------*/
 
 h1 {
-  font-family: Lobster;
+  font-family: 'Lobster', cursive;
 }
 
 /*.nav {
+<<<<<<< HEAD
 align-content: space-around;
 text-align: center;
 font-family: FrancoisOne-Regular;
@@ -173,6 +224,19 @@ font-family: FrancoisOne-Regular;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+=======
+  align-content: space-around;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;;
+}*/
+
+.bio-container {
+    font-family: 'Francois One', sans-serif;;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+>>>>>>> 5c34784ca0c3068377507d327c142e0c95be558a
 }
 
 
@@ -217,7 +281,7 @@ font-family: FrancoisOne-Regular;
 }
 
 .person1-bio, .person2-bio, .person3-bio, .person4-bio {
-  font-family: Roboto-Regular;
+  font-family: 'Roboto', sans-serif;
 }
 
 .person1-pic, .person2-pic, .person3-pic, .person4-pic {
@@ -307,6 +371,10 @@ tr {
     display: flex;
     margin: 5%;
     display: flex;
+    font-family: 'Roboto-Regular','FrancoisOne-Regular','Lobster';
+    src: url('assets/Roboto-Regular.ttf'),url('assets/FrancoisOne-Regular.ttf'), url('assets/Lobster-Regular.ttf');
+
+  }
 }
 .navBoard ul li {
   list-style: none;

@@ -7,12 +7,30 @@
 </head>
 
 <body>
-  <nav class = "navBoard">
-    <ul>
-      <li> <a href = "index.html">Home</a></li>
-      <li> <a href = "aboutus.html">About Us</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class ="logo-container">
+      <!-- <object id="animateLogo" type="image/svg+xml" data="assets/favrlogo.svg"></object> -->
+      <object id="animateLogo" type="image/svg+xml" data="assets/favrlogo3.svg"></object>
+      <div class ="logo-image">
+    </div>
+    <h2 class ="sub-title">Lend a Hand</h2>
+
+  <div class="sub-header">
+    <div class="social-media-box">
+      <a href="https://www.facebook.com"><img src="assets/fb.png"></a>
+      <a href="https://www.instagram.com"><img src="assets/insta.png"></a>
+      <a href="https://twitter.com"><img src="assets/twit.png"></a>
+    </div>
+
+    <!-- <p class="greeting" id = "greet">Hello, guest!</p> -->
+  </div>
+  <div class = "nav">
+
+    <a class="home-button" href = "index.html">Home</a>
+    <a class="about-button" href = "aboutus.html">About Us</a>
+
+  </div>
+
 
   <div class = "table-map">
     <div class="postboard-container">
@@ -26,11 +44,12 @@
     </div>
   </div>
 
+<script type="text/javascript" src="appPostBoard.js" ></script>
 
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGWk7oxDG7CuPs_YAwxUisKmmE4GHXjZw&callback=initMap">
   </script>
-  <script type="text/javascript" src="appPostBoard.js" ></script>
+
 
 </body>
 </html>

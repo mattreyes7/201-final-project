@@ -1,5 +1,7 @@
 // 'use strict'
 
+//var userName = ''
+//document.getElementById('greet').textContent = 'Hello, ' +  userName + '!';
 var table = document.getElementById('postBoard');
 var nameData;
 
@@ -31,12 +33,11 @@ var citiesCoordinates = [
   {name: 'tacoma', lat:47.2529 , lng:-122.4443},
   {name: 'puyallup', lat: 47.1854, lng:-122.2929 },
 ];
+
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island','bothel', 'new castle', 'renton', 'issaquah', 'carnation' ,
 'kent', 'tukwila', 'woodinville', 'lynwood', 'tacoma', 'puyallup'];
+
 var clientEnteredCities = [];
-
-
-function renderHeader(){
 
   //console.log(clientArray);
   function renderHeader() {
@@ -137,7 +138,7 @@ function renderHeader(){
         }
 
         notifyPoster(this);
-        console.log(checkbox.checked);
+      //console.log(checkbox.checked);
       })
           renderAsRow(clientArray);
 
@@ -152,7 +153,7 @@ function renderHeader(){
       table.appendChild(trElement);
 
     }
-  }
+}
 
   console.log(clientEnteredCities);
 
@@ -178,21 +179,21 @@ function renderHeader(){
         });
 
         for (i=0; i<clientEnteredCities.length; i++){
-          console.log('client i '+ clientEnteredCities[i]);
+        //  console.log('client i '+ clientEnteredCities[i]);
           var index = cityNamesArray.indexOf(clientEnteredCities[i]);
           //console.log(index);
           if (index!==-1){
             console.log(citiesCoordinates[index]);
             var marker = new google.maps.Marker({
               position: {lat:citiesCoordinates[index].lat, lng:citiesCoordinates[index].lng},
-              label: citiesCoordinates.indexOf()+1,
+              // label: ,
               map: map
             });
           } else {
             alert('Please, go back to the form page and check your spelling');
             var marker = new google.maps.Marker({
               position: {lat:80, lng:120},
-              label: (citiesCoordinates.indexOf()+1),
+              // label: (),
               map: map
         });
       }

@@ -26,9 +26,14 @@ var citiesCoordinates = [
   { name: 'issaquah', lat: 47.5301, lng: -122.0326 },
   { name: 'carnation', lat: 47.6479, lng: -121.914 },
   { name:  'kent', lat: 47.3809, lng: -122.2348 },
+  {name: 'tukwila', lat:47.4740 , lng:-122.2610},
+  {name: 'woodinville', lat:47.7543 , lng: -122.1635},
+  {name: 'lynnwood', lat:47.8209 , lng:-122.3151 },
+  {name: 'tacoma', lat:47.2529 , lng:-122.4443},
+  {name: 'puyallup', lat: 47.1854, lng:-122.2929 },
 ];
 var cityNamesArray = ['seattle', 'redmond', 'bellevue', 'sammamish', 'kirkland', 'mercer island',
-'bothel', 'new castle', 'renton', 'issaquah', 'carnation', 'kent']
+'bothel', 'new castle', 'renton', 'issaquah', 'carnation', 'kent','tukwila', 'woodinville', 'lynwood', 'tacoma', 'puyallup']
 ;
 
 var clientEnteredCities = [];
@@ -127,9 +132,9 @@ function renderAsRow(client) {
 
     function notifyPoster(event) {
       if (event.checked) {
-        alert('Thank you! A message has been sent to the poster.');
+        alert('Thank you! A message has been sent to the poster. Have a nice day!');
       } else {
-        alert('Please make another selection.');
+        alert('The message has been recalled. Please make another selection or exit.  Have a nice day!');
       }
     }
 
@@ -144,6 +149,7 @@ renderAsRow(clientArray);
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
+
    zoom: 10,
    center: { lat: 47.6062, lng: -122.3321 }
  });
@@ -162,5 +168,6 @@ function initMap() {
      map: map,
    });
  } else {alert('Please go back to homepage and check the spelling in Favor Location')}
+
 }
 }

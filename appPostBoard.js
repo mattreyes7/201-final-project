@@ -9,12 +9,12 @@ var jobNumber = 1;
 var trElement;
 var cityName;
 
-
 var clientArray = JSON.parse(localStorage.getItem('lsClientArray'));
 
 //console.log(clientArray);
 
 var citiesCoordinates = [
+<<<<<<< HEAD
   {name:'seattle', lat:47.6062, lng:-122.3321},
   {name:'redmond', lat:47.6740, lng:-122.1215},
   {name:'bellevue', lat:47.6101, lng:-122.2015},
@@ -57,6 +57,7 @@ var clientEnteredCities = [];
     nameData.textContent = 'E-mail';
     trElement.appendChild(nameData);
 
+
     nameData = document.createElement('td');
     nameData.textContent = 'Job Description';
     trElement.appendChild(nameData);
@@ -79,6 +80,7 @@ var clientEnteredCities = [];
 
   renderHeader();
 
+
   //rendering table rows function:
   function renderAsRow(client) {
     for (var i = 0; i < clientArray.length; i++) {
@@ -92,29 +94,26 @@ var clientEnteredCities = [];
 
       trElement.appendChild(nameData);
 
-
       jobNumber++;
 
       nameData = document.createElement('td');
       nameData.textContent = client[i].name;
       trElement.appendChild(nameData);
 
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].email;
+    trElement.appendChild(nameData);
 
-      nameData = document.createElement('td');
-      nameData.textContent = client[i].email;
-      trElement.appendChild(nameData);
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].descript;
+    trElement.appendChild(nameData);
 
+    nameData = document.createElement('td');
+    nameData.textContent = client[i].loc;
+    cityName = client[i].loc.toLowerCase();
+    clientEnteredCities.push(cityName);
+    trElement.appendChild(nameData);
 
-      nameData = document.createElement('td');
-      nameData.textContent = client[i].descript;
-      trElement.appendChild(nameData);
-
-
-      nameData = document.createElement('td');
-      nameData.textContent = client[i].loc;
-      cityName = client[i].loc.toLowerCase();
-      clientEnteredCities.push(cityName);
-      trElement.appendChild(nameData);
 
       nameData = document.createElement('td');
       nameData.textContent = client[i].time;
@@ -155,11 +154,11 @@ var clientEnteredCities = [];
     }
 }
 
+
   console.log(clientEnteredCities);
 
   renderAsRow(clientArray);
 
-    console.log(clientEnteredCities);
 
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
@@ -198,5 +197,26 @@ var clientEnteredCities = [];
         });
       }
     }
+// =======
+// console.log(clientEnteredCities);
+//
+// renderAsRow(clientArray);
+//
+// function initMap() {
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 10,
+//     center: { lat: 47.6062, lng: -122.3321 }
+//   });
+//
+//   for (i = 0; i < clientEnteredCities.length; i++) {
+//     console.log('client i ' + clientEnteredCities[i]);
+//     var index = cityNamesArray.indexOf(clientEnteredCities[i]);
+//     console.log(index);
+//     console.log(citiesCoordinates[index]);
+//     var marker = new google.maps.Marker({
+//       position: { lat: citiesCoordinates[index].lat, lng: citiesCoordinates[index].lng },
+//       map: map,
+//     });
+// >>>>>>> 0522f6dc9fa5d218b6121918e9aebc97863cf98d
   }
 }

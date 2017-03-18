@@ -8,6 +8,46 @@ html {
   background-image: linear-gradient(white 45%, #00FFFF);
 
 }
+.pre-main {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: center;
+}
+.caption2 {
+  /*height: 100%;
+  width: 100%;*/
+  align-self: center;
+  opacity: 0;
+  text-align: center;
+  backface-visibility: hidden;
+  transition: transform 0.3s, opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: #8CC63E;
+  color: white;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.caption1 {
+  font-size: 20px;
+  align-self: center;
+  justify-content: center;
+}
+
+.caption1:hover .caption2 {
+  font-size: 20px;
+  /*max-width: 100%;*/
+  /*display: block;*/
+  position: relative;
+  opacity: 1;
+  transform: translate(15px, 15px);
+}
+
 /*--------------header styles-----------------------*/
 .logo-container {
   display: flex;
@@ -167,7 +207,7 @@ main {
   border-radius: 10px;
   padding: 30px;
   color: #00A79D;
-
+  border-radius: 10px;
 }
 .do-hand {
   justify-content: center;

@@ -247,8 +247,19 @@ h1 {
 
 }
 
+#person1-pic {
+  background-image: url('https://a6m4rf6fdx-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/CodeFellows.png');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+  }
+
+  #person1-pic:hover {
+    background-image: url('https://media3.giphy.com/media/6onMzNPjtFeCI/200.webp#38');
+  }
+
 #person2-pic {
-  background-image: url('https://avatars1.githubusercontent.com/u/22847819?v=3&s=460');
+  background-image: url('assets/sidney.jpg');
   background-size: cover;
   width: 200px;
   height: 150px;
@@ -257,6 +268,28 @@ h1 {
 #person2-pic:hover {
   background-image: url('https://media.giphy.com/media/xT9KVluGDHZvOk0tdC/giphy.gif');
 }
+
+#person3-pic {
+  background-image: url('assets/iryna.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+  }
+
+  #person3-pic:hover {
+    background-image: url('https://media1.giphy.com/media/7rQSSmxalNtfy/200w.webp#1');
+  }
+
+  #person4-pic {
+    background-image: url('assets/matt.jpg');
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+    }
+
+    #person4-pic:hover {
+      background-image: url('https://media.giphy.com/media/13NpBBe23hWspy/giphy.gif');
+    }
 
  .about-us-footer{
   width: 300px;

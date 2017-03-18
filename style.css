@@ -385,7 +385,7 @@ font-family: 'Francois One', sans-serif;;
 
 
 #person1-pic {
-  background-image: url('https://a6m4rf6fdx-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/CodeFellows.png');
+  background-image: url('assets/adonay.png');
   background-size: cover;
   width: 200px;
   height: 150px;
@@ -425,7 +425,8 @@ font-family: 'Francois One', sans-serif;;
 }
 
 #person4-pic:hover {
-  background-image: url('https://media.giphy.com/media/13NpBBe23hWspy/giphy.gif');
+  background-image: url('http://37.media.tumblr.com/tumblr_lp5h8ugPBs1qhad67o1_500.gif');
+  background-size: cover;
 }
 
 .home-footer {
@@ -438,12 +439,17 @@ font-family: 'Francois One', sans-serif;;
 }
 .about-us-footer{
   width: 300px;
-  height: 500px;
   flex-wrap: wrap;
   text-align: center;
 }
 
 /*****************Post-board page styles****************/
+h1 {
+  color: #00A79D;
+  font-family: 'Lobster';
+  font-size: 60px;
+}
+
 table{
   border: solid 2px #8CC63E;
   justify-content: center;

@@ -149,23 +149,25 @@ renderAsRow(clientArray);
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: { lat: 47.6062, lng: -122.3321 }
-  });
-  var image = 'assets/askhandmarker.png';
-  for (i = 0; i < clientEnteredCities.length; i++) {
-    console.log('client i ' + clientEnteredCities[i]);
-    var index = cityNamesArray.indexOf(clientEnteredCities[i]);
-    console.log(index);
-    console.log(citiesCoordinates[index]);
-    if (index !== -1){
-      markerLabel = ''+(i+1);
-    var marker = new google.maps.Marker({
-      label: markerLabel,
-      icon: image,
-      position: { lat: citiesCoordinates[index].lat, lng: citiesCoordinates[index].lng },
-      map: map,
-    });
-  } else {alert('Please go back to homepage and check the spelling in Favor Location')}
+
+   zoom: 10,
+   center: { lat: 47.6062, lng: -122.3321 }
+ });
+ var image = 'assets/askhandmarker.png';
+ for (i = 0; i < clientEnteredCities.length; i++) {
+   console.log('client i ' + clientEnteredCities[i]);
+   var index = cityNamesArray.indexOf(clientEnteredCities[i]);
+   console.log(index);
+   console.log(citiesCoordinates[index]);
+   if (index !== -1){
+     markerLabel = ''+(i+1);
+   var marker = new google.maps.Marker({
+     label: markerLabel,
+     icon: image,
+     position: { lat: citiesCoordinates[index].lat, lng: citiesCoordinates[index].lng },
+     map: map,
+   });
+ } else {alert('Please go back to homepage and check the spelling in Favor Location')}
+
 }
 }

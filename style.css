@@ -356,7 +356,7 @@ fieldset {
 }
 
 #person2-pic:hover {
-  background-image: url('https://media.giphy.com/media/xT9KVluGDHZvOk0tdC/giphy.gif');
+  background-image: url('https://media.giphy.com/media/xT9KVluGDHZvOk0tdC/giphy.gassets/adonay.pngif');
 }
 
 #person3-pic {
@@ -390,7 +390,7 @@ fieldset {
   color: white;
 }
  .about-us-footer{
-  width: 300px;
+
   height: 500px;
   flex-wrap: wrap;
   text-align: center;
